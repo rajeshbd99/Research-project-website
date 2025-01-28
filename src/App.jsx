@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaBook, FaCheckCircle,FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
-import img1 from './assets/img1.jpg'; // Ensure this file exists in the correct directory
+import { FaExternalLinkAlt, FaDownload, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import img1 from './assets/img1.jpg';
 
 const App = () => {
   return (
@@ -69,7 +69,7 @@ const App = () => {
       {/* Dataset Section */}
       <section id="dataset" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
         <div className="container mx-auto px-4 text-lg">
-          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-16">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
             <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
@@ -157,78 +157,78 @@ const App = () => {
 
 
       {/* Dataset Links Section */}
-<section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
-  <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-extrabold text-blue-700 mb-8 flex items-center justify-center mb-16">
-      <FaLink className="mr-3 text-blue-500" />
-      Dataset Links
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Kaggle Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <FaExternalLinkAlt className="text-blue-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Explore the dataset on Kaggle for detailed insights and examples.
-          </p>
-          <a
-            href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 mt-4 inline-block hover:underline"
-          >
-            Visit Kaggle <FaExternalLinkAlt className="inline" />
-          </a>
-        </div>
-      </div>
+      <section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-8 flex items-center justify-center mb-16 mt-10">
+            <FaLink className="mr-3 text-blue-500" />
+            Dataset Links
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Kaggle Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaExternalLinkAlt className="text-blue-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Explore the dataset on Kaggle for detailed insights and examples.
+                </p>
+                <a
+                  href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 mt-4 inline-block hover:underline"
+                >
+                  Visit Kaggle <FaExternalLinkAlt className="inline" />
+                </a>
+              </div>
+            </div>
 
-      {/* Download Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <FaDownload className="text-green-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-green-600">Download Dataset</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Get a local copy of the dataset for your research and analysis.
-          </p>
-          <a
-            href="https://example.com/download"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-600 mt-4 inline-block hover:underline"
-          >
-            Download Now <FaDownload className="inline" />
-          </a>
-        </div>
-      </div>
+            {/* Download Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaDownload className="text-green-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-green-600">Download Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Get a local copy of the dataset for your research and analysis.
+                </p>
+                <a
+                  href="https://example.com/download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 mt-4 inline-block hover:underline"
+                >
+                  Download Now <FaDownload className="inline" />
+                </a>
+              </div>
+            </div>
 
-      {/* IEEE Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <FaBook className="text-red-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-red-600">IEEE Publication</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Read our publication on IEEE Xplore for an in-depth analysis.
-          </p>
-          <a
-            href="https://ieeexplore.ieee.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-red-600 mt-4 inline-block hover:underline"
-          >
-            View on IEEE <FaBook className="inline" />
-          </a>
+            {/* IEEE Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaBook className="text-red-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-red-600">IEEE Publication</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Read our publication on IEEE Xplore for an in-depth analysis.
+                </p>
+                <a
+                  href="https://ieeexplore.ieee.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 mt-4 inline-block hover:underline"
+                >
+                  View on IEEE <FaBook className="inline" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mb-16">
+          <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mb-16 mt-10">
             <FaStar className="text-blue-500 mr-3" />
             Key Features of the Dataset
             <FaStar className="text-blue-500 ml-3" />
@@ -327,57 +327,102 @@ const App = () => {
 
 
       {/* Usage Policy Section */}
-<section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
-  <div className="container mx-auto px-6">
-    <div className="bg-white shadow-lg rounded-lg p-8">
-      <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16">
-        <FaExclamationCircle className="text-blue-500 mr-3" />
-        Usage Policy
-      </h2>
-      <p className="text-gray-700 leading-relaxed mb-6 text-xl">
-        This dataset is intended for <strong>educational</strong> and <strong>research purposes only</strong>. 
-        Commercial use is strictly prohibited. Users are required to provide proper attribution to the creators if this dataset is utilized in any project or publication.
-      </p>
-      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-        <h3 className="text-2xl font-semibold text-blue-600 mb-2">Inspiration</h3>
-        <p className="text-gray-700 text-xl">
-          This dataset was created to facilitate research in defense and security applications, particularly for identifying and tracking military objects in drone-captured imagery. 
-          It serves as a valuable resource for exploring advancements in computer vision and autonomous surveillance systems.
-        </p>
-      </div>
-      <div className="space-y-4">
-        <div className="flex items-start space-x-4">
-          <FaCheckCircle className="text-green-600 text-2xl" />
-          <p className="text-gray-700 text-xl">
-            The dataset can only be used for academic projects, research, or to develop proof-of-concept models.
-          </p>
-        </div>
-        <div className="flex items-start space-x-4">
-          <FaCheckCircle className="text-green-600 text-2xl" />
-          <p className="text-gray-700 text-xl">
-            Redistribution of the dataset in any form without the authors’ permission is not allowed.
-          </p>
-        </div>
-        <div className="flex items-start space-x-4">
-          <FaCheckCircle className="text-green-600 text-2xl" />
-          <p className="text-gray-700 text-xl">
-            If used in a publication or project, proper credit must be given to the creators.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      <section id="provenance" className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Provenance</h2>
-          <p>
-            The dataset combines images collected by drones, public sources, and YouTube video frames. Images were preprocessed with resizing, cropping, and augmentations to ensure diversity.
-          </p>
+      <section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
+        <div className="container mx-auto px-6">
+          <div className="bg-white shadow-lg rounded-lg p-8">
+            <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
+              <FaExclamationCircle className="text-blue-500 mr-3" />
+              Usage Policy
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
+              This dataset is intended for <strong>educational</strong> and <strong>research purposes only</strong>.
+              Commercial use is strictly prohibited. Users are required to provide proper attribution to the creators if this dataset is utilized in any project or publication.
+            </p>
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+              <h3 className="text-2xl font-semibold text-blue-600 mb-2">Inspiration</h3>
+              <p className="text-gray-700 text-xl">
+                This dataset was created to facilitate research in defense and security applications, particularly for identifying and tracking military objects in drone-captured imagery.
+                It serves as a valuable resource for exploring advancements in computer vision and autonomous surveillance systems.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4">
+                <FaCheckCircle className="text-green-600 text-2xl" />
+                <p className="text-gray-700 text-xl">
+                  The dataset can only be used for academic projects, research, or to develop proof-of-concept models.
+                </p>
+              </div>
+              <div className="flex items-start space-x-4">
+                <FaCheckCircle className="text-green-600 text-2xl" />
+                <p className="text-gray-700 text-xl">
+                  Redistribution of the dataset in any form without the authors’ permission is not allowed.
+                </p>
+              </div>
+              <div className="flex items-start space-x-4">
+                <FaCheckCircle className="text-green-600 text-2xl" />
+                <p className="text-gray-700 text-xl">
+                  If used in a publication or project, proper credit must be given to the creators.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Provenance Section */}
+      <section id="provenance" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
+        <div className="container mx-auto px-6">
+          <div className="bg-white shadow-lg rounded-lg p-8">
+            <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
+              <FaInfoCircle className="mr-3 text-blue-500" />
+              Provenance
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
+              The dataset combines <strong>drone-captured images</strong>, public sources, and frames extracted from high-resolution YouTube videos depicting military scenarios.
+              Images were carefully preprocessed to ensure diversity and robustness.
+            </p>
+
+            {/* Provenance Updates */}
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 text-xl">
+              <h3 className="text-2xl font-semibold text-blue-600 mb-2">Provenance Updates</h3>
+              <p className="text-gray-700">
+                <strong>Auto Syncing: Off</strong><br />
+                Data will not continually sync with new notebook versions.
+              </p>
+            </div>
+
+            {/* Sources */}
+            <h3 className="text-2xl font-semibold text-green-600 mb-4 flex items-center">
+              <FaDatabase className="mr-2 text-green-500" />
+              Sources
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
+              This dataset combines drone-captured images collected by us, publicly available images from online sources, and frames extracted from high-resolution YouTube videos depicting military scenarios.
+            </p>
+
+            {/* Collection Methodology */}
+            <h3 className="text-2xl font-semibold text-purple-600 mb-4 flex items-center">
+              <FaCog className="mr-2 text-purple-500" />
+              Collection Methodology
+            </h3>
+            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
+              Images were preprocessed through resizing, cropping, and augmentations like <strong>rotation</strong>, <strong>scaling</strong>, and <strong>brightness adjustments</strong> to enhance diversity.
+            </p>
+
+            {/* License */}
+            <div className="bg-gray-50 border-l-4 border-gray-400 p-4">
+              <h3 className="text-2xl font-semibold text-gray-600 mb-2 flex items-center">
+                <FaShieldAlt className="mr-2 text-gray-500" />
+                License
+              </h3>
+              <p className="text-gray-700 text-xl">
+                Attribution-NonCommercial 4.0 International (<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CC BY-NC 4.0</a>)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer */}
       <footer className="bg-blue-600 text-white py-6">
