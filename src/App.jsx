@@ -1,37 +1,47 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaLink, FaGithub, FaInfoCircle, FaCog, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg';
+import { SiMega } from "react-icons/si";
+import { DiGoogleDrive } from "react-icons/di";
+import img from './assets/Screenshot 2025-01-28 235024.png';
 
 const App = () => {
   return (
     <div className="bg-gray-100 font-sans">
       {/* Navbar */}
-<nav className=" text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
-  <div className="container mx-auto flex justify-between items-center">
-    <h1 className="text-3xl font-bold tracking-wide text-black">Military Dataset</h1>
-    <div className="space-x-8 text-black">
-      <Link to="banner" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Home
-      </Link>
-      <Link to="dataset" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Dataset
-      </Link>
-      <Link to="links" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Links
-      </Link>
-      <Link to="features" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Features
-      </Link>
-      <Link to="usage" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Usage Policy
-      </Link>
-      <Link to="provenance" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-        Provenance
-      </Link>
-    </div>
-  </div>
-</nav>
+      <nav className=" text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
+        <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="flex items-center text-black font-semibold text-lg space-x-2">
+          <img
+            src={img}
+            alt="Logo"
+            className="w-10 h-10 object-contain"
+          />
+          <span className="hidden lg:block">Military Dataset</span>
+        </Link>
+          <div className="space-x-8 text-black">
+            <Link to="banner" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Home
+            </Link>
+            <Link to="dataset" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Dataset
+            </Link>
+            <Link to="features" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Features
+            </Link>
+            <Link to="links" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Links
+            </Link>
+            <Link to="usage" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Usage Policy
+            </Link>
+            <Link to="provenance" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
+              Provenance
+            </Link>
+          </div>
+        </div>
+      </nav>
 
 
       {/* Banner Section */}
@@ -156,72 +166,92 @@ const App = () => {
       </section>
 
       {/* Dataset Links Section */}
-      <section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-blue-700 mb-8 flex items-center justify-center mb-16 mt-10">
-            <FaLink className="mr-3 text-blue-500" />
-            Dataset Links
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Kaggle Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <FaExternalLinkAlt className="text-blue-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Explore the dataset on Kaggle for detailed insights and examples.
-                </p>
-                <a
-                  href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 mt-4 inline-block hover:underline"
-                >
-                  Visit Kaggle <FaExternalLinkAlt className="inline" />
-                </a>
-              </div>
-            </div>
-
-            {/* Download Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <FaDownload className="text-green-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-green-600">Download Dataset</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Get a local copy of the dataset for your research and analysis.
-                </p>
-                <a
-                  href="https://example.com/download"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 mt-4 inline-block hover:underline"
-                >
-                  Download Now <FaDownload className="inline" />
-                </a>
-              </div>
-            </div>
-
-            {/* IEEE Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <FaBook className="text-red-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-red-600">IEEE Publication</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Read our publication on IEEE Xplore for an in-depth analysis.
-                </p>
-                <a
-                  href="https://ieeexplore.ieee.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 mt-4 inline-block hover:underline"
-                >
-                  View on IEEE <FaBook className="inline" />
-                </a>
-              </div>
-            </div>
-          </div>
+<section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
+      <FaLink className="mr-3 text-blue-500" />
+      Dataset Links
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-justify">
+      {/* Kaggle Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <FaExternalLinkAlt className="text-blue-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Explore the dataset on Kaggle for detailed insights and examples.
+          </p>
+          <a
+            href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 mt-4 inline-block hover:underline text-lg"
+          >
+            Visit Kaggle <FaExternalLinkAlt className="inline" />
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* Google Drive Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <DiGoogleDrive className="text-green-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-green-600">Google Drive</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Get a local copy of the dataset for your research and analysis.
+          </p>
+          <a
+            href="https://example.com/download"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 mt-4 inline-block hover:underline text-lg"
+          >
+            Download Now <FaDownload className="inline" />
+          </a>
+        </div>
+      </div>
+
+      {/* Mega Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <SiMega className="text-red-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-red-600">Mega Dataset</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Access the complete dataset directly from Mega for detailed analysis and research applications.
+          </p>
+          <a
+            href="https://example.com/mega"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-600 mt-4 inline-block hover:underline text-lg"
+          >
+            Access Mega <FaExternalLinkAlt className="inline" />
+          </a>
+        </div>
+      </div>
+
+      {/* GitHub Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <FaGithub className="text-gray-800 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-gray-800">GitHub Repository</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Explore the codebase and implementation details on our GitHub repository.
+          </p>
+          <a
+            href="https://github.com/your-repo-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 mt-4 inline-block hover:underline text-lg"
+          >
+            Visit GitHub <FaGithub className="inline" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
@@ -351,7 +381,7 @@ const App = () => {
               <div className="flex items-start space-x-4">
                 <FaCheckCircle className="text-green-600 text-2xl" />
                 <p className="text-gray-700 text-xl">
-                  Redistribution of the dataset in any form without the authors’ permission is not allowed.
+                  Redistribution of the dataset in any form without the authors permission is not allowed.
                 </p>
               </div>
               <div className="flex items-start space-x-4">
