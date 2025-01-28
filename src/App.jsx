@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaBook, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaLink, FaBook, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg'; // Ensure this file exists in the correct directory
 
 const App = () => {
@@ -158,46 +158,73 @@ const App = () => {
 
 
       {/* Dataset Links Section */}
-      <section id="links" className="bg-gray-200 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Dataset Links</h2>
-          <ul className="space-y-4">
-            <li className="flex items-center space-x-4">
-              <FaExternalLinkAlt className="text-blue-600" />
-              <a
-                href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Kaggle Dataset Link
-              </a>
-            </li>
-            <li className="flex items-center space-x-4">
-              <FaDownload className="text-green-600" />
-              <a
-                href="https://example.com/download"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-600 hover:underline"
-              >
-                Download Dataset
-              </a>
-            </li>
-            <li className="flex items-center space-x-4">
-              <FaBook className="text-red-600" />
-              <a
-                href="https://ieeexplore.ieee.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red-600 hover:underline"
-              >
-                IEEE Publication Link
-              </a>
-            </li>
-          </ul>
+<section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-extrabold text-blue-700 mb-8 flex items-center justify-center mb-16">
+      <FaLink className="mr-3 text-blue-500" />
+      Dataset Links
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Kaggle Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <FaExternalLinkAlt className="text-blue-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Explore the dataset on Kaggle for detailed insights and examples.
+          </p>
+          <a
+            href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 mt-4 inline-block hover:underline"
+          >
+            Visit Kaggle <FaExternalLinkAlt className="inline" />
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* Download Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <FaDownload className="text-green-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-green-600">Download Dataset</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Get a local copy of the dataset for your research and analysis.
+          </p>
+          <a
+            href="https://example.com/download"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 mt-4 inline-block hover:underline"
+          >
+            Download Now <FaDownload className="inline" />
+          </a>
+        </div>
+      </div>
+
+      {/* IEEE Link */}
+      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+        <FaBook className="text-red-600 text-3xl" />
+        <div>
+          <h3 className="text-2xl font-semibold text-red-600">IEEE Publication</h3>
+          <p className="text-gray-700 mt-2 text-xl">
+            Read our publication on IEEE Xplore for an in-depth analysis.
+          </p>
+          <a
+            href="https://ieeexplore.ieee.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-600 mt-4 inline-block hover:underline"
+          >
+            View on IEEE <FaBook className="inline" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
@@ -213,7 +240,7 @@ const App = () => {
               <FaCameraRetro className="text-blue-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">High-Resolution Drone Imagery</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Contains <strong>1,700 high-quality images</strong> captured from drones for military object detection.
                 </p>
               </div>
@@ -224,7 +251,7 @@ const App = () => {
               <FaGlobe className="text-green-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-green-600">Diverse and Robust Dataset</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Data represents various environmental conditions, including diverse lighting, backgrounds, angles, and weather scenarios, enhancing robustness and diversity.
                 </p>
               </div>
@@ -235,7 +262,7 @@ const App = () => {
               <FaListOl className="text-red-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-red-600">Seven Distinct Classes</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Military objects are classified into seven categories: <strong>Artillery</strong>, <strong>Missile</strong>, <strong>Radar</strong>, <strong>M. Rocket Launcher</strong>, <strong>Soldier</strong>, <strong>Tank</strong>, and <strong>Vehicle</strong>.
                 </p>
               </div>
@@ -246,7 +273,7 @@ const App = () => {
               <FaPenFancy className="text-purple-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-purple-600">Detailed Annotations</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Over <strong>4,100 meticulous annotations</strong> created using CVAT for YOLO bounding boxes. Each object has normalized coordinates and class labels.
                 </p>
               </div>
@@ -257,7 +284,7 @@ const App = () => {
               <FaClock className="text-blue-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">Tailored for Real-Time Applications</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Specifically curated for training YOLO-based models and optimized for real-time detection in military scenarios.
                 </p>
               </div>
@@ -268,7 +295,7 @@ const App = () => {
               <FaTools className="text-green-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-green-600">Augmentation Techniques</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Data augmentation, including resizing, cropping, and other techniques, ensures better generalization across various conditions.
                 </p>
               </div>
@@ -279,7 +306,7 @@ const App = () => {
               <FaChartPie className="text-orange-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-orange-600">Split for Generalization</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Dataset is split into <strong>training (80%)</strong>, <strong>validation (10%)</strong>, and <strong>testing (10%)</strong> sets to ensure model generalization and effective evaluation.
                 </p>
               </div>
@@ -290,7 +317,7 @@ const App = () => {
               <FaShieldAlt className="text-teal-600 text-3xl" />
               <div>
                 <h3 className="text-2xl font-semibold text-teal-600">Curated from Reputable Sources</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-xl">
                   Images sourced from open-source military datasets and publicly accessible images, ensuring authenticity and relevance.
                 </p>
               </div>
