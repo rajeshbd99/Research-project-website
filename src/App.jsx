@@ -51,24 +51,56 @@ const App = () => {
             id="menu"
             className="hidden lg:flex lg:space-x-8 lg:text-black lg:static lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:p-0 lg:rounded-none absolute top-14 left-0 bg-white backdrop-blur-md shadow-lg w-full lg:w-auto lg:flex-row rounded-b-xl p-4"
           >
-            <Link to="banner" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-              Home
-            </Link>
-            <Link to="dataset" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-              Dataset
-            </Link>
-            <Link to="features" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-              Features
-            </Link>
-            <Link to="links" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-              Links
-            </Link>
-            <Link to="usage" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-              Usage Policy
-            </Link>
-            <Link to="provenance" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0 ">
-              Provenance
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="banner"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Home
+              </Link>
+              <Link
+                to="dataset"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Dataset
+              </Link>
+              <Link
+                to="features"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Features
+              </Link>
+              <Link
+                to="links"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Links
+              </Link>
+              <Link
+                to="usage"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-teal-400 to-teal-600 hover:from-teal-500 hover:to-teal-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Usage Policy
+              </Link>
+              <Link
+                to="provenance"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-red-400 to-red-600 hover:from-red-500 hover:to-red-700 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Provenance
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -109,11 +141,11 @@ const App = () => {
       {/* Dataset Section */}
       <section id="dataset" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
         <div className="container mx-auto px-4 text-lg">
-          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-10 mt-10">
             <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6 flex flex-col md:flex-row items-center justify-center text-base md:text-lg lg:text-xl text-center md:text-left">
+          <p className="text-gray-700 leading-relaxed mb-6 flex flex-col md:flex-row items-center justify-center text-lg md:text-lg lg:text-xl text-center md:text-left">
             The dataset contains <strong className="text-black ml-1">1,700 high-resolution images</strong> captured by drones, annotated in the YOLO format for object detection tasks.
           </p>
 
@@ -243,7 +275,7 @@ const App = () => {
             <FaLink className="mr-3 text-blue-500" />
             Dataset Links
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-justify">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {/* Kaggle Link */}
             <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
               <FaExternalLinkAlt className="text-blue-600 text-3xl" />
