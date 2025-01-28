@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload,FaGithub, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg';
 
 const App = () => {
@@ -231,7 +231,6 @@ const App = () => {
           <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mb-16 mt-10">
             <FaStar className="text-blue-500 mr-3" />
             Key Features of the Dataset
-            <FaStar className="text-blue-500 ml-3" />
           </h2>
           <div className="space-y-8">
             {/* High-Resolution Drone Imagery */}
@@ -425,11 +424,31 @@ const App = () => {
 
 
       {/* Footer */}
-      <footer className="bg-blue-600 text-white py-6">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2025 Drone Defense Research. All rights reserved.</p>
-        </div>
-      </footer>
+<footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12">
+  <div className="container mx-auto text-center space-y-6">
+    <div className="text-lg font-semibold">
+      <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
+    </div>
+    <div className="text-sm">
+      <p>Innovating in defense technology through cutting-edge research.</p>
+    </div>
+    <div className="flex justify-center space-x-6">
+      <a href="https://twitter.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-twitter text-2xl"></i>
+      </a>
+      <a href="https://linkedin.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://github.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-github text-2xl"></i>
+      </a>
+    </div>
+    <div className="text-xs">
+      <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 };
