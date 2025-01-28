@@ -342,7 +342,7 @@ const App = () => {
                   Explore the codebase and implementation details on our GitHub repository.
                 </p>
                 <a
-                  href="https://github.com/your-repo-link"
+                  href="https://github.com/Sudip-329/KIIT-MiTA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-800 mt-4 inline-block hover:underline text-lg"
