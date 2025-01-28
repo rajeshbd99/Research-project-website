@@ -1,37 +1,38 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload,FaGithub, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaLink, FaInfoCircle, FaCog, FaBook, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg';
 
 const App = () => {
   return (
     <div className="bg-gray-100 font-sans">
       {/* Navbar */}
-      <nav className="bg-blue-600 text-white p-4 sticky top-0 z-50 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Military Dataset</h1>
-          <div className="space-x-6">
-            <Link to="banner" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Home
-            </Link>
-            <Link to="dataset" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Dataset
-            </Link>
-            <Link to="links" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Links
-            </Link>
-            <Link to="features" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Features
-            </Link>
-            <Link to="usage" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Usage Policy
-            </Link>
-            <Link to="provenance" smooth={true} duration={500} className="hover:underline cursor-pointer">
-              Provenance
-            </Link>
-          </div>
-        </div>
-      </nav>
+<nav className=" text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
+  <div className="container mx-auto flex justify-between items-center">
+    <h1 className="text-3xl font-bold tracking-wide text-black">Military Dataset</h1>
+    <div className="space-x-8 text-black">
+      <Link to="banner" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Home
+      </Link>
+      <Link to="dataset" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Dataset
+      </Link>
+      <Link to="links" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Links
+      </Link>
+      <Link to="features" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Features
+      </Link>
+      <Link to="usage" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Usage Policy
+      </Link>
+      <Link to="provenance" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
+        Provenance
+      </Link>
+    </div>
+  </div>
+</nav>
+
 
       {/* Banner Section */}
       <section id="banner" className="bg-blue-600 text-white relative">
@@ -109,7 +110,6 @@ const App = () => {
             </li>
           </ul>
 
-
           {/* Data Collection */}
           <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
             <FaDatabase className="mr-2" />
@@ -154,7 +154,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
 
       {/* Dataset Links Section */}
       <section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
@@ -223,7 +222,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
 
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
@@ -324,7 +322,6 @@ const App = () => {
         </div>
       </section>
 
-
       {/* Usage Policy Section */}
       <section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
         <div className="container mx-auto px-6">
@@ -422,33 +419,31 @@ const App = () => {
         </div>
       </section>
 
-
       {/* Footer */}
-<footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12">
-  <div className="container mx-auto text-center space-y-6">
-    <div className="text-lg font-semibold">
-      <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
-    </div>
-    <div className="text-sm">
-      <p>Innovating in defense technology through cutting-edge research.</p>
-    </div>
-    <div className="flex justify-center space-x-6">
-      <a href="https://twitter.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-twitter text-2xl"></i>
-      </a>
-      <a href="https://linkedin.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-linkedin text-2xl"></i>
-      </a>
-      <a href="https://github.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-github text-2xl"></i>
-      </a>
-    </div>
-    <div className="text-xs">
-      <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
-    </div>
-  </div>
-</footer>
-
+      <footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12">
+        <div className="container mx-auto text-center space-y-6">
+          <div className="text-lg font-semibold">
+            <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
+          </div>
+          <div className="text-sm">
+            <p>Innovating in defense technology through cutting-edge research.</p>
+          </div>
+          <div className="flex justify-center space-x-6">
+            <a href="https://twitter.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="https://linkedin.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://github.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github text-2xl"></i>
+            </a>
+          </div>
+          <div className="text-xs">
+            <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
