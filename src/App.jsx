@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaDownload, FaLink, FaBook, FaCheckCircle,FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
