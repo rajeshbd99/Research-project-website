@@ -45,7 +45,6 @@ const App = () => {
               </svg>
             </button>
           </div>
-
           {/* Menu Links */}
           <div
             id="menu"
@@ -56,7 +55,7 @@ const App = () => {
                 to="banner"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Home
               </Link>
@@ -64,7 +63,7 @@ const App = () => {
                 to="dataset"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Dataset
               </Link>
@@ -72,7 +71,7 @@ const App = () => {
                 to="features"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Features
               </Link>
@@ -80,7 +79,7 @@ const App = () => {
                 to="links"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Links
               </Link>
@@ -88,7 +87,7 @@ const App = () => {
                 to="usage"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-teal-400 to-teal-600 hover:from-teal-500 hover:to-teal-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Usage Policy
               </Link>
@@ -96,7 +95,7 @@ const App = () => {
                 to="provenance"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-gradient-to-r from-red-400 to-red-600 hover:from-red-500 hover:to-red-700 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Provenance
               </Link>
@@ -217,22 +216,22 @@ const App = () => {
                   {
                     name: "Sudip Chakrabarty",
                     email: "21053329@kiit.ac.in",
-                    img: sudip, // Replace with actual image URL
+                    img: sudip,
                   },
                   {
                     name: "Sourov Roy Shuvo",
                     email: "21053456@kiit.ac.in",
-                    img: sourov, // Replace with actual image URL
+                    img: sourov,
                   },
                   {
                     name: "Rajesh Chowdhury",
                     email: "21053394@kiit.ac.in",
-                    img: rajesh, // Replace with actual image URL
+                    img: rajesh,
                   },
                   {
                     name: "Sorup Chakraborty",
                     email: "21053328@kiit.ac.in",
-                    img: sorup, // Replace with actual image URL
+                    img: sorup,
                   },
                 ].map((contributor, index) => (
                   <div
@@ -256,7 +255,6 @@ const App = () => {
               </div>
             </div>
           </section>
-
 
           {/* Footer Information */}
           <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
@@ -354,7 +352,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
 
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
