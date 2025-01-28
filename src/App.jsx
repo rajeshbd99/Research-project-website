@@ -14,66 +14,64 @@ const App = () => {
   return (
     <div className="bg-gray-100 font-sans">
       {/* Navbar */}
-<nav className="text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
-  <div className="container mx-auto flex justify-between items-center">
-    {/* Logo Section */}
-    <Link to="banner" className="flex items-center text-black font-semibold text-lg space-x-2 cursor-pointer">
-      <img
-        src={img}
-        alt="Logo"
-        className="w-10 h-10 object-contain"
-      />
-      <span className="block lg:inline">Military Dataset</span>
-    </Link>
+      <nav className="text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo Section */}
+          <Link to="banner" className="flex items-center text-black font-semibold text-lg space-x-2 cursor-pointer">
+            <img
+              src={img}
+              alt="Logo"
+              className="w-10 h-10 object-contain"
+            />
+            <span className="block lg:inline">Military Dataset</span>
+          </Link>
 
-    {/* Hamburger Menu for Mobile */}
-    <div className="lg:hidden">
-      <button
-        id="menu-toggle"
-        className="text-black focus:outline-none"
-        onClick={() => {
-          const menu = document.getElementById("menu");
-          menu.classList.toggle("hidden");
-        }}
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
-    </div>
+          {/* Hamburger Menu for Mobile */}
+          <div className="lg:hidden">
+            <button
+              id="menu-toggle"
+              className="text-black focus:outline-none"
+              onClick={() => {
+                const menu = document.getElementById("menu");
+                menu.classList.toggle("hidden");
+              }}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
 
-    {/* Menu Links */}
-    <div
-      id="menu"
-      className="hidden lg:flex lg:space-x-8 lg:text-black lg:static lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:p-0 lg:rounded-none absolute top-14 left-0 bg-white backdrop-blur-md shadow-lg w-full lg:w-auto lg:flex-row rounded-b-xl p-4"
-    >
-      <Link to="banner" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-        Home
-      </Link>
-      <Link to="dataset" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-        Dataset
-      </Link>
-      <Link to="features" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-        Features
-      </Link>
-      <Link to="links" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-        Links
-      </Link>
-      <Link to="usage" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
-        Usage Policy
-      </Link>
-      <Link to="provenance" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0 ">
-        Provenance
-      </Link>
-    </div>
-  </div>
-</nav>
-
-
+          {/* Menu Links */}
+          <div
+            id="menu"
+            className="hidden lg:flex lg:space-x-8 lg:text-black lg:static lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:p-0 lg:rounded-none absolute top-14 left-0 bg-white backdrop-blur-md shadow-lg w-full lg:w-auto lg:flex-row rounded-b-xl p-4"
+          >
+            <Link to="banner" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+              Home
+            </Link>
+            <Link to="dataset" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+              Dataset
+            </Link>
+            <Link to="features" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+              Features
+            </Link>
+            <Link to="links" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+              Links
+            </Link>
+            <Link to="usage" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+              Usage Policy
+            </Link>
+            <Link to="provenance" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0 ">
+              Provenance
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       {/* Banner Section */}
       <section id="banner" className="bg-blue-600 text-white relative">
@@ -115,8 +113,8 @@ const App = () => {
             <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-6 flex items-center justify-center text-lg">
-            The dataset contains <strong>1,700 high-resolution images</strong> captured by drones, annotated in the YOLO format for object detection tasks.
+          <p className="text-gray-700 leading-relaxed mb-6 flex flex-col md:flex-row items-center justify-center text-base md:text-lg lg:text-xl text-center md:text-left">
+            The dataset contains <strong className="text-black ml-1">1,700 high-resolution images</strong> captured by drones, annotated in the YOLO format for object detection tasks.
           </p>
 
           {/* Key Features */}
@@ -175,57 +173,57 @@ const App = () => {
           </p>
 
           {/* Contributors */}
-<section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
-  <div className="container mx-auto px-6">
-    <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
-      <FaUsers className="mr-3" />
-      Contributors
-    </h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {/* Contributor Card */}
-      {[
-        {
-          name: "Sudip Chakrabarty",
-          email: "21053329@kiit.ac.in",
-          img: sudip, // Replace with actual image URL
-        },
-        {
-          name: "Sourov Roy Shuvo",
-          email: "21053456@kiit.ac.in",
-          img: sourov, // Replace with actual image URL
-        },
-        {
-          name: "Rajesh Chowdhury",
-          email: "21053394@kiit.ac.in",
-          img: rajesh, // Replace with actual image URL
-        },
-        {
-          name: "Sorup Chakraborty",
-          email: "21053328@kiit.ac.in",
-          img: sorup, // Replace with actual image URL
-        },
-      ].map((contributor, index) => (
-        <div
-          key={index}
-          className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
-        >
-          <img
-            src={contributor.img}
-            alt={contributor.name}
-            className="w-24 h-24 rounded-full mb-4 shadow-md"
-          />
-          <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
-          <a
-            href={`mailto:${contributor.email}`}
-            className="text-blue-500 hover:underline mt-2 text-sm"
-          >
-            {contributor.email}
-          </a>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+          <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
+            <div className="container mx-auto px-6">
+              <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
+                <FaUsers className="mr-3" />
+                Contributors
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Contributor Card */}
+                {[
+                  {
+                    name: "Sudip Chakrabarty",
+                    email: "21053329@kiit.ac.in",
+                    img: sudip, // Replace with actual image URL
+                  },
+                  {
+                    name: "Sourov Roy Shuvo",
+                    email: "21053456@kiit.ac.in",
+                    img: sourov, // Replace with actual image URL
+                  },
+                  {
+                    name: "Rajesh Chowdhury",
+                    email: "21053394@kiit.ac.in",
+                    img: rajesh, // Replace with actual image URL
+                  },
+                  {
+                    name: "Sorup Chakraborty",
+                    email: "21053328@kiit.ac.in",
+                    img: sorup, // Replace with actual image URL
+                  },
+                ].map((contributor, index) => (
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
+                  >
+                    <img
+                      src={contributor.img}
+                      alt={contributor.name}
+                      className="w-24 h-24 rounded-full mb-4 shadow-md"
+                    />
+                    <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
+                    <a
+                      href={`mailto:${contributor.email}`}
+                      className="text-blue-500 hover:underline mt-2 text-sm"
+                    >
+                      {contributor.email}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
 
           {/* Footer Information */}
@@ -239,91 +237,91 @@ const App = () => {
       </section>
 
       {/* Dataset Links Section */}
-<section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
-  <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
-      <FaLink className="mr-3 text-blue-500" />
-      Dataset Links
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-justify">
-      {/* Kaggle Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <FaExternalLinkAlt className="text-blue-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Explore the dataset on Kaggle for detailed insights and examples.
-          </p>
-          <a
-            href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 mt-4 inline-block hover:underline text-lg"
-          >
-            Visit Kaggle <FaExternalLinkAlt className="inline" />
-          </a>
-        </div>
-      </div>
+      <section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
+            <FaLink className="mr-3 text-blue-500" />
+            Dataset Links
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-justify">
+            {/* Kaggle Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaExternalLinkAlt className="text-blue-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Explore the dataset on Kaggle for detailed insights and examples.
+                </p>
+                <a
+                  href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Visit Kaggle <FaExternalLinkAlt className="inline" />
+                </a>
+              </div>
+            </div>
 
-      {/* Google Drive Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <DiGoogleDrive className="text-green-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-green-600">Google Drive</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Get a local copy of the dataset for your research and analysis.
-          </p>
-          <a
-            href="https://drive.google.com/drive/folders/1fZ_B0lIpVgThWAEi3BPSNnUPr1j3eCiN?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-600 mt-4 inline-block hover:underline text-lg"
-          >
-            Download Now <FaDownload className="inline" />
-          </a>
-        </div>
-      </div>
+            {/* Google Drive Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <DiGoogleDrive className="text-green-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-green-600">Google Drive</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Get a local copy of the dataset for your research and analysis.
+                </p>
+                <a
+                  href="https://drive.google.com/drive/folders/1fZ_B0lIpVgThWAEi3BPSNnUPr1j3eCiN?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Download Now <FaDownload className="inline" />
+                </a>
+              </div>
+            </div>
 
-      {/* Mega Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <SiMega className="text-red-600 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-red-600">Mega Dataset</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Access the complete dataset directly from Mega for detailed analysis and research applications.
-          </p>
-          <a
-            href="https://mega.nz/folder/hesAGKZT#PGPJeQjWy3oQL9nyhBqt5g"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-red-600 mt-4 inline-block hover:underline text-lg"
-          >
-            Access Mega <FaExternalLinkAlt className="inline" />
-          </a>
-        </div>
-      </div>
+            {/* Mega Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <SiMega className="text-red-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-red-600">Mega Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Access the complete dataset directly from Mega for detailed analysis and research applications.
+                </p>
+                <a
+                  href="https://mega.nz/folder/hesAGKZT#PGPJeQjWy3oQL9nyhBqt5g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Access Mega <FaExternalLinkAlt className="inline" />
+                </a>
+              </div>
+            </div>
 
-      {/* GitHub Link */}
-      <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-        <FaGithub className="text-gray-800 text-3xl" />
-        <div>
-          <h3 className="text-2xl font-semibold text-gray-800">GitHub Repository</h3>
-          <p className="text-gray-700 mt-2 text-xl">
-            Explore the codebase and implementation details on our GitHub repository.
-          </p>
-          <a
-            href="https://github.com/your-repo-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 mt-4 inline-block hover:underline text-lg"
-          >
-            Visit GitHub <FaGithub className="inline" />
-          </a>
+            {/* GitHub Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaGithub className="text-gray-800 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800">GitHub Repository</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Explore the codebase and implementation details on our GitHub repository.
+                </p>
+                <a
+                  href="https://github.com/your-repo-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 mt-4 inline-block hover:underline text-lg"
+                >
+                  Visit GitHub <FaGithub className="inline" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {/* Other Sections */}
@@ -531,7 +529,7 @@ const App = () => {
           <div className="text-sm">
             <p>Innovating in defense technology through cutting-edge research.</p>
           </div>
-          <div className="flex justify-center space-x-6">
+          {/* <div className="flex justify-center space-x-6">
             <a href="https://twitter.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter text-2xl"></i>
             </a>
@@ -541,7 +539,7 @@ const App = () => {
             <a href="https://github.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github text-2xl"></i>
             </a>
-          </div>
+          </div> */}
           <div className="text-xs">
             <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
           </div>
