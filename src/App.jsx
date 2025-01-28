@@ -5,43 +5,74 @@ import img1 from './assets/img1.jpg';
 import { SiMega } from "react-icons/si";
 import { DiGoogleDrive } from "react-icons/di";
 import img from './assets/Screenshot 2025-01-28 235024.png';
+import rajesh from './assets/rajesh.jpg';
+import sourov from './assets/sourav.jpg';
+import sudip from './assets/sudip.jpeg';
+import sorup from './assets/sorup.jpg';
 
 const App = () => {
   return (
     <div className="bg-gray-100 font-sans">
       {/* Navbar */}
-      <nav className=" text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
-        <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center text-black font-semibold text-lg space-x-2">
-          <img
-            src={img}
-            alt="Logo"
-            className="w-10 h-10 object-contain"
+<nav className="text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
+  <div className="container mx-auto flex justify-between items-center">
+    {/* Logo Section */}
+    <Link to="banner" className="flex items-center text-black font-semibold text-lg space-x-2 cursor-pointer">
+      <img
+        src={img}
+        alt="Logo"
+        className="w-10 h-10 object-contain"
+      />
+      <span className="block lg:inline">Military Dataset</span>
+    </Link>
+
+    {/* Hamburger Menu for Mobile */}
+    <div className="lg:hidden">
+      <button
+        id="menu-toggle"
+        className="text-black focus:outline-none"
+        onClick={() => {
+          const menu = document.getElementById("menu");
+          menu.classList.toggle("hidden");
+        }}
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
           />
-          <span className="hidden lg:block">Military Dataset</span>
-        </Link>
-          <div className="space-x-8 text-black">
-            <Link to="banner" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Home
-            </Link>
-            <Link to="dataset" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Dataset
-            </Link>
-            <Link to="features" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Features
-            </Link>
-            <Link to="links" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Links
-            </Link>
-            <Link to="usage" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Usage Policy
-            </Link>
-            <Link to="provenance" smooth={true} duration={500} className="text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer btn btn-primary">
-              Provenance
-            </Link>
-          </div>
-        </div>
-      </nav>
+        </svg>
+      </button>
+    </div>
+
+    {/* Menu Links */}
+    <div
+      id="menu"
+      className="hidden lg:flex lg:space-x-8 lg:text-black lg:static lg:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:p-0 lg:rounded-none absolute top-14 left-0 bg-white backdrop-blur-md shadow-lg w-full lg:w-auto lg:flex-row rounded-b-xl p-4"
+    >
+      <Link to="banner" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+        Home
+      </Link>
+      <Link to="dataset" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+        Dataset
+      </Link>
+      <Link to="features" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+        Features
+      </Link>
+      <Link to="links" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+        Links
+      </Link>
+      <Link to="usage" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0">
+        Usage Policy
+      </Link>
+      <Link to="provenance" smooth={true} duration={500} className="block lg:inline-block text-lg font-semibold text-black hover:text-white transition-colors btn btn-primary mb-2 lg:mb-0 ">
+        Provenance
+      </Link>
+    </div>
+  </div>
+</nav>
+
 
 
       {/* Banner Section */}
@@ -144,16 +175,58 @@ const App = () => {
           </p>
 
           {/* Contributors */}
-          <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
-            <FaUsers className="mr-2" />
-            Contributors
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-800 text-xl">
-            <li>Sudip Chakrabarty - <a href="mailto:21053329@kiit.ac.in" className="text-blue-500 hover:underline">21053329@kiit.ac.in</a></li>
-            <li>Sourov Roy Shuvo - <a href="mailto:21053456@kiit.ac.in" className="text-blue-500 hover:underline">21053456@kiit.ac.in</a></li>
-            <li>Rajesh Chowdhury - <a href="mailto:21053394@kiit.ac.in" className="text-blue-500 hover:underline">21053394@kiit.ac.in</a></li>
-            <li>Sorup Chakraborty - <a href="mailto:21053328@kiit.ac.in" className="text-blue-500 hover:underline">21053328@kiit.ac.in</a></li>
-          </ul>
+<section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
+  <div className="container mx-auto px-6">
+    <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
+      <FaUsers className="mr-3" />
+      Contributors
+    </h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Contributor Card */}
+      {[
+        {
+          name: "Sudip Chakrabarty",
+          email: "21053329@kiit.ac.in",
+          img: sudip, // Replace with actual image URL
+        },
+        {
+          name: "Sourov Roy Shuvo",
+          email: "21053456@kiit.ac.in",
+          img: sourov, // Replace with actual image URL
+        },
+        {
+          name: "Rajesh Chowdhury",
+          email: "21053394@kiit.ac.in",
+          img: rajesh, // Replace with actual image URL
+        },
+        {
+          name: "Sorup Chakraborty",
+          email: "21053328@kiit.ac.in",
+          img: sorup, // Replace with actual image URL
+        },
+      ].map((contributor, index) => (
+        <div
+          key={index}
+          className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src={contributor.img}
+            alt={contributor.name}
+            className="w-24 h-24 rounded-full mb-4 shadow-md"
+          />
+          <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
+          <a
+            href={`mailto:${contributor.email}`}
+            className="text-blue-500 hover:underline mt-2 text-sm"
+          >
+            {contributor.email}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
           {/* Footer Information */}
           <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
@@ -201,7 +274,7 @@ const App = () => {
             Get a local copy of the dataset for your research and analysis.
           </p>
           <a
-            href="https://example.com/download"
+            href="https://drive.google.com/drive/folders/1fZ_B0lIpVgThWAEi3BPSNnUPr1j3eCiN?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-600 mt-4 inline-block hover:underline text-lg"
@@ -220,7 +293,7 @@ const App = () => {
             Access the complete dataset directly from Mega for detailed analysis and research applications.
           </p>
           <a
-            href="https://example.com/mega"
+            href="https://mega.nz/folder/hesAGKZT#PGPJeQjWy3oQL9nyhBqt5g"
             target="_blank"
             rel="noopener noreferrer"
             className="text-red-600 mt-4 inline-block hover:underline text-lg"
