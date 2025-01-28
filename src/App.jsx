@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaBook, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaLink, FaBook, FaCheckCircle,FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg'; // Ensure this file exists in the correct directory
 
 const App = () => {
@@ -327,14 +327,49 @@ const App = () => {
       </section>
 
 
-      <section id="usage" className="bg-gray-200 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Usage Policy</h2>
-          <p>
-            This dataset is intended for educational and research purposes only. Commercial use is strictly prohibited. Proper attribution to the creators is required.
+      {/* Usage Policy Section */}
+<section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
+  <div className="container mx-auto px-6">
+    <div className="bg-white shadow-lg rounded-lg p-8">
+      <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16">
+        <FaExclamationCircle className="text-blue-500 mr-3" />
+        Usage Policy
+      </h2>
+      <p className="text-gray-700 leading-relaxed mb-6 text-xl">
+        This dataset is intended for <strong>educational</strong> and <strong>research purposes only</strong>. 
+        Commercial use is strictly prohibited. Users are required to provide proper attribution to the creators if this dataset is utilized in any project or publication.
+      </p>
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+        <h3 className="text-2xl font-semibold text-blue-600 mb-2">Inspiration</h3>
+        <p className="text-gray-700 text-xl">
+          This dataset was created to facilitate research in defense and security applications, particularly for identifying and tracking military objects in drone-captured imagery. 
+          It serves as a valuable resource for exploring advancements in computer vision and autonomous surveillance systems.
+        </p>
+      </div>
+      <div className="space-y-4">
+        <div className="flex items-start space-x-4">
+          <FaCheckCircle className="text-green-600 text-2xl" />
+          <p className="text-gray-700 text-xl">
+            The dataset can only be used for academic projects, research, or to develop proof-of-concept models.
           </p>
         </div>
-      </section>
+        <div className="flex items-start space-x-4">
+          <FaCheckCircle className="text-green-600 text-2xl" />
+          <p className="text-gray-700 text-xl">
+            Redistribution of the dataset in any form without the authors’ permission is not allowed.
+          </p>
+        </div>
+        <div className="flex items-start space-x-4">
+          <FaCheckCircle className="text-green-600 text-2xl" />
+          <p className="text-gray-700 text-xl">
+            If used in a publication or project, proper credit must be given to the creators.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section id="provenance" className="bg-white py-16">
         <div className="container mx-auto px-4">
