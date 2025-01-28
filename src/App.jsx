@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaBook } from "react-icons/fa";
-import img1 from './assets/img 1.jpg'; // Ensure this file exists in the correct directory
+import { FaExternalLinkAlt, FaDownload, FaBook, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import img1 from './assets/img1.jpg'; // Ensure this file exists in the correct directory
 
 const App = () => {
   return (
@@ -10,13 +10,16 @@ const App = () => {
       {/* Navbar */}
       <nav className="bg-blue-600 text-white p-4 sticky top-0 z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Drone Defense Research</h1>
+          <h1 className="text-2xl font-bold">Military Dataset</h1>
           <div className="space-x-6">
             <Link to="banner" smooth={true} duration={500} className="hover:underline cursor-pointer">
               Home
             </Link>
             <Link to="dataset" smooth={true} duration={500} className="hover:underline cursor-pointer">
               Dataset
+            </Link>
+            <Link to="links" smooth={true} duration={500} className="hover:underline cursor-pointer">
+              Links
             </Link>
             <Link to="features" smooth={true} duration={500} className="hover:underline cursor-pointer">
               Features
@@ -40,11 +43,9 @@ const App = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-4xl font-bold mb-4">
-              Drones in Defense: Real-Time Vision-Based Military Target Surveillance
-            </h1>
+            <h1 className="text-4xl font-bold mb-4">KIIT Military Target Archive (KIIT- MiTA)</h1>
             <p className="text-lg mb-6">
-              Enhancing situational awareness with advanced object detection and tracking techniques.
+              High-Resolution Drone Imagery for Military Object Detection and Recognition
             </p>
             <Link
               to="dataset"
@@ -67,33 +68,239 @@ const App = () => {
       </section>
 
       {/* Dataset Section */}
-      <section id="dataset" className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Dataset</h2>
-          <p>
-            The dataset contains 1,700 high-resolution images captured by drones, annotated in the YOLO format for object detection tasks.
+      <section id="dataset" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
+        <div className="container mx-auto px-4 text-lg">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-16">
+            <FaDownload className="mr-2" />
+            Dataset Overview
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-6 flex items-center justify-center text-lg">
+            The dataset contains <strong>1,700 high-resolution images</strong> captured by drones, annotated in the YOLO format for object detection tasks.
           </p>
-          <ul className="list-disc ml-6 mt-4">
-            <li>7 distinct classes: Artillery, Missile, Radar, M. Rocket Launcher, Soldier, Tank, and Vehicle</li>
-            <li>Detailed bounding box annotations for each object class</li>
-            <li>Ideal for training YOLO-based models or other object detection architectures</li>
+
+          {/* Key Features */}
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4">Key Features:</h3>
+          <ul className="space-y-4 text-gray-800 mb-8">
+            <li className="flex items-start space-x-4">
+              <FaAngleRight className="text-blue-600 mt-1" />
+              <span className="text-lg">
+                7 distinct classes:
+                <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
+                  <li>Artillery</li>
+                  <li>Missile</li>
+                  <li>Radar</li>
+                  <li>M. Rocket Launcher</li>
+                  <li>Soldier</li>
+                  <li>Tank</li>
+                  <li>Vehicle</li>
+                </ul>
+              </span>
+            </li>
+            <li className="flex items-start space-x-4">
+              <FaAngleRight className="text-blue-600 mt-1" />
+              <span className="text-lg">
+                Detailed bounding box annotations for each object class
+              </span>
+            </li>
+            <li className="flex items-start space-x-4">
+              <FaAngleRight className="text-blue-600 mt-1" />
+              <span className="text-lg">
+                Ideal for training YOLO-based models or other object detection architectures
+              </span>
+            </li>
           </ul>
+
+
+          {/* Data Collection */}
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
+            <FaDatabase className="mr-2" />
+            Data Collection
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+            To prepare the dataset, a total of <strong>1,700 images</strong> of military objects were gathered from reputable sources and meticulously annotated for each object class.
+            Our data sources included open-source military datasets and publicly accessible images, ensuring coverage of various environmental conditions.
+            The dataset represents diverse lighting conditions, backgrounds, angles, and weather scenarios, enhancing diversity and robustness.
+          </p>
+
+          {/* Data Annotation */}
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
+            <FaMarker className="mr-2" />
+            Data Annotation
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+            The images were manually annotated using <strong>CVAT</strong>, an open-source tool for YOLO bounding box annotation.
+            Each object was annotated with its class label and bounding box coordinates, normalized based on image dimensions.
+            This process resulted in over <strong>4,100 annotations</strong> to optimize model training and enhance performance accuracy.
+            This careful annotation ensures a robust detection model.
+          </p>
+
+          {/* Contributors */}
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
+            <FaUsers className="mr-2" />
+            Contributors
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-800 text-xl">
+            <li>Sudip Chakrabarty - <a href="mailto:21053329@kiit.ac.in" className="text-blue-500 hover:underline">21053329@kiit.ac.in</a></li>
+            <li>Sourov Roy Shuvo - <a href="mailto:21053456@kiit.ac.in" className="text-blue-500 hover:underline">21053456@kiit.ac.in</a></li>
+            <li>Rajesh Chowdhury - <a href="mailto:21053394@kiit.ac.in" className="text-blue-500 hover:underline">21053394@kiit.ac.in</a></li>
+            <li>Sorup Chakraborty - <a href="mailto:21053328@kiit.ac.in" className="text-blue-500 hover:underline">21053328@kiit.ac.in</a></li>
+          </ul>
+
+          {/* Footer Information */}
+          <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
+            <h4 className="text-2xl font-semibold text-blue-600">Under the Guidance of:</h4>
+            <p className="text-gray-800">Dr. Rajdeep Chatterjee</p>
+            <p className="text-gray-800">School of Computer Engineering, KIIT</p>
+            <p className="text-gray-800">Bhubaneswar, Odisha - 751024</p>
+          </div>
         </div>
       </section>
 
-      {/* Other Sections (Features, Usage Policy, Provenance) */}
-      <section id="features" className="bg-gray-200 py-16">
+
+      {/* Dataset Links Section */}
+      <section id="links" className="bg-gray-200 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">Key Features</h2>
-          <ul className="list-disc ml-6">
-            <li>High-resolution drone imagery suitable for defense and security-focused research.</li>
-            <li>Robust dataset with augmentations for enhanced diversity.</li>
-            <li>Annotations tailored for real-time military applications.</li>
+          <h2 className="text-3xl font-bold mb-4">Dataset Links</h2>
+          <ul className="space-y-4">
+            <li className="flex items-center space-x-4">
+              <FaExternalLinkAlt className="text-blue-600" />
+              <a
+                href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Kaggle Dataset Link
+              </a>
+            </li>
+            <li className="flex items-center space-x-4">
+              <FaDownload className="text-green-600" />
+              <a
+                href="https://example.com/download"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-600 hover:underline"
+              >
+                Download Dataset
+              </a>
+            </li>
+            <li className="flex items-center space-x-4">
+              <FaBook className="text-red-600" />
+              <a
+                href="https://ieeexplore.ieee.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-600 hover:underline"
+              >
+                IEEE Publication Link
+              </a>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section id="usage" className="bg-white py-16">
+      {/* Other Sections */}
+      <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mb-16">
+            <FaStar className="text-blue-500 mr-3" />
+            Key Features of the Dataset
+            <FaStar className="text-blue-500 ml-3" />
+          </h2>
+          <div className="space-y-8">
+            {/* High-Resolution Drone Imagery */}
+            <div className="flex items-start space-x-4">
+              <FaCameraRetro className="text-blue-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-blue-600">High-Resolution Drone Imagery</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Contains <strong>1,700 high-quality images</strong> captured from drones for military object detection.
+                </p>
+              </div>
+            </div>
+
+            {/* Diverse and Robust Dataset */}
+            <div className="flex items-start space-x-4">
+              <FaGlobe className="text-green-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-green-600">Diverse and Robust Dataset</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Data represents various environmental conditions, including diverse lighting, backgrounds, angles, and weather scenarios, enhancing robustness and diversity.
+                </p>
+              </div>
+            </div>
+
+            {/* Seven Distinct Classes */}
+            <div className="flex items-start space-x-4">
+              <FaListOl className="text-red-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-red-600">Seven Distinct Classes</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Military objects are classified into seven categories: <strong>Artillery</strong>, <strong>Missile</strong>, <strong>Radar</strong>, <strong>M. Rocket Launcher</strong>, <strong>Soldier</strong>, <strong>Tank</strong>, and <strong>Vehicle</strong>.
+                </p>
+              </div>
+            </div>
+
+            {/* Detailed Annotations */}
+            <div className="flex items-start space-x-4">
+              <FaPenFancy className="text-purple-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-purple-600">Detailed Annotations</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Over <strong>4,100 meticulous annotations</strong> created using CVAT for YOLO bounding boxes. Each object has normalized coordinates and class labels.
+                </p>
+              </div>
+            </div>
+
+            {/* Tailored for Real-Time Applications */}
+            <div className="flex items-start space-x-4">
+              <FaClock className="text-blue-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-blue-600">Tailored for Real-Time Applications</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Specifically curated for training YOLO-based models and optimized for real-time detection in military scenarios.
+                </p>
+              </div>
+            </div>
+
+            {/* Augmentation Techniques */}
+            <div className="flex items-start space-x-4">
+              <FaTools className="text-green-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-green-600">Augmentation Techniques</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Data augmentation, including resizing, cropping, and other techniques, ensures better generalization across various conditions.
+                </p>
+              </div>
+            </div>
+
+            {/* Split for Generalization */}
+            <div className="flex items-start space-x-4">
+              <FaChartPie className="text-orange-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-orange-600">Split for Generalization</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Dataset is split into <strong>training (80%)</strong>, <strong>validation (10%)</strong>, and <strong>testing (10%)</strong> sets to ensure model generalization and effective evaluation.
+                </p>
+              </div>
+            </div>
+
+            {/* Curated from Reputable Sources */}
+            <div className="flex items-start space-x-4">
+              <FaShieldAlt className="text-teal-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-teal-600">Curated from Reputable Sources</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Images sourced from open-source military datasets and publicly accessible images, ensuring authenticity and relevance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="usage" className="bg-gray-200 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Usage Policy</h2>
           <p>
@@ -102,7 +309,7 @@ const App = () => {
         </div>
       </section>
 
-      <section id="provenance" className="bg-gray-200 py-16">
+      <section id="provenance" className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Provenance</h2>
           <p>
