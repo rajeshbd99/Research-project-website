@@ -176,7 +176,7 @@ const App = () => {
             Data Collection
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-          The KIIT-MITA dataset was created by capturing drone footage through authorized drone operations and sourcing publicly available videos from platforms like YouTube. Given the difficulty in accessing military drone images, frames were extracted from these videos to build a diverse dataset.
+            The KIIT-MITA dataset was created by capturing drone footage through authorized drone operations and sourcing publicly available videos from platforms like YouTube. Given the difficulty in accessing military drone images, frames were extracted from these videos to build a diverse dataset.
           </p>
 
           {/* Data Annotation */}
@@ -185,7 +185,7 @@ const App = () => {
             Data Annotation
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-          The images were manually annotated using CVAT, an open-source tool for bounding box annotation. Each object was labeled with its class and annotated with rectangular bounding box coordinates, which were normalized based on the image dimensions.
+            The images were manually annotated using CVAT, an open-source tool for bounding box annotation. Each object was labeled with its class and annotated with rectangular bounding box coordinates, which were normalized based on the image dimensions.
           </p>
         </div>
       </section>
@@ -204,7 +204,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">High-Resolution Drone Imagery</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                The dataset includes 1,700 high-quality drone images, ideal for real-time military object detection and tracking operations.
+                  The dataset includes 1,700 high-quality drone images, ideal for real-time military object detection and tracking operations.
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-purple-600">Detailed Annotations</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                Over 4,100 meticulous annotations, exported in YOLO format with corresponding .txt files for coordinates, including normalized values and class labels.
+                  Over 4,100 meticulous annotations, exported in YOLO format with corresponding .txt files for coordinates, including normalized values and class labels.
                 </p>
               </div>
             </div>
@@ -263,7 +263,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">Tailored for Real-Time Applications</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                Specifically curated for training object detection and tracking models, optimized for real-time applications in military scenarios within the domain of computer vision.
+                  Specifically curated for training object detection and tracking models, optimized for real-time applications in military scenarios within the domain of computer vision.
                 </p>
               </div>
             </div>
@@ -285,8 +285,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-orange-600">Split for Generalization</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                The dataset is divided into three sets to ensure model generalization and effective evaluation:
-
+                  The dataset is divided into three sets to ensure model generalization and effective evaluation:
                 </p>
                 <li className="flex items-start space-x-4">
                   <FaAngleRight className="text-blue-600 mt-1" />
@@ -445,80 +444,77 @@ const App = () => {
       </section >
 
       {/* Contributors Section */}
-<section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
-  <div className="container mx-auto px-6 mt-16">
-    <h3 className="text-4xl font-extrabold text-blue-700 mb-12 text-center flex items-center justify-center">
-      <FaUsers className="mr-3 text-blue-500" />
-      Our Contributors
-    </h3>
+      <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
+        <div className="container mx-auto px-6 mt-16">
+          <h3 className="text-4xl font-extrabold text-blue-700 mb-12 text-center flex items-center justify-center">
+            <FaUsers className="mr-3 text-blue-500" />
+            Our Contributors
+          </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      {/* Contributor Cards */}
-      {[
-        {
-          name: "Sudip Chakrabarty",
-          email: "sudipchakrabarty6@gmail.com",
-          img: sudip,
-          github: "https://github.com/Sudip-329",
-          linkedin: "https://www.linkedin.com/in/sudipchakrabarty329",
-        },
-        {
-          name: "Sourov Roy Shuvo",
-          email: "sourovroyshuvo777@gmail.com",
-          img: sourav1,
-          github: "https://github.com/SourovRS",
-          linkedin: "https://www.linkedin.com/in/sourov-roy-shuvo-292582255",
-        },
-        {
-          name: "Rajesh Chowdhury",
-          email: "rajesh99.bd@gmail.com",
-          img: rajesh,
-          github: "https://github.com/rajeshbd99",
-          linkedin: "https://www.linkedin.com/in/rajesh-chowdhury-361360224",
-        },
-        {
-          name: "Sorup Chakraborty",
-          email: "sorupchakraborty001@gmail.com",
-          img: sorup,
-          github: "https://github.com/sorupchakraborty",
-          linkedin: "https://www.linkedin.com/in/sorupchakraborty",
-        },
-      ].map((contributor, index) => (
-        <div
-          key={index}
-          className="relative bg-white shadow-xl rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300"
-        >
-          <img
-            src={contributor.img}
-            alt={contributor.name}
-            className="w-28 h-28 rounded-full border-4 border-blue-400 mb-4 shadow-lg object-cover"
-          />
-          <h4 className="text-2xl font-bold text-gray-800">{contributor.name}</h4>
-          
-          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Contributor Cards */}
+            {[
+              {
+                name: "Sudip Chakrabarty",
+                email: "sudipchakrabarty6@gmail.com",
+                img: sudip,
+                github: "https://github.com/Sudip-329",
+                linkedin: "https://www.linkedin.com/in/sudipchakrabarty329",
+              },
+              {
+                name: "Sourov Roy Shuvo",
+                email: "sourovroyshuvo777@gmail.com",
+                img: sourav1,
+                github: "https://github.com/SourovRS",
+                linkedin: "https://www.linkedin.com/in/sourov-roy-shuvo-292582255",
+              },
+              {
+                name: "Rajesh Chowdhury",
+                email: "rajesh99.bd@gmail.com",
+                img: rajesh,
+                github: "https://github.com/rajeshbd99",
+                linkedin: "https://www.linkedin.com/in/rajesh-chowdhury-361360224",
+              },
+              {
+                name: "Sorup Chakraborty",
+                email: "sorupchakraborty001@gmail.com",
+                img: sorup,
+                github: "https://github.com/sorupchakraborty",
+                linkedin: "https://www.linkedin.com/in/sorupchakraborty",
+              },
+            ].map((contributor, index) => (
+              <div
+                key={index}
+                className="relative bg-white shadow-xl rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300"
+              >
+                <img
+                  src={contributor.img}
+                  alt={contributor.name}
+                  className="w-28 h-28 rounded-full border-4 border-blue-400 mb-4 shadow-lg object-cover"
+                />
+                <h4 className="text-2xl font-bold text-gray-800">{contributor.name}</h4>
 
-          <div className="flex space-x-5 mt-4">
-            {/* Email Icon - Clicking it will open Gmail */}
-          <button
-            onClick={() => window.location.href = `mailto:${contributor.email}`}
-            className="text-blue-500 hover:text-blue-700 text-2xl transition-transform transform hover:scale-110"
-            title="Send Email"
-          >
-            <FaEnvelope />
-          </button>
-            <a href={contributor.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
-              <FaGithub />
-            </a>
-            <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
-              <FaLinkedin />
-            </a>
+                <div className="flex space-x-5 mt-4">
+                  {/* Email Icon - Clicking it will open Gmail */}
+                  <button
+                    onClick={() => window.location.href = `mailto:${contributor.email}`}
+                    className="text-blue-500 hover:text-blue-700 text-2xl transition-transform transform hover:scale-110"
+                    title="Send Email"
+                  >
+                    <FaEnvelope />
+                  </button>
+                  <a href={contributor.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
+                    <FaGithub />
+                  </a>
+                  <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
+                    <FaLinkedin />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Advisor Section */}
       <section id="advisor" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 mb-10">
@@ -550,7 +546,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-3" >
