@@ -150,9 +150,15 @@ const App = () => {
 
           {/* Description */}
           <p className="text-gray-700 leading-relaxed mb-6 flex flex-col md:flex-row items-center justify-center text-lg md:text-lg lg:text-xl text-center md:text-left">
-            The dataset contains <strong className="text-black ml-1">1,700 high-resolution images</strong>
-            captured by drones, annotated in the YOLO format for object detection tasks.
+            In todays world, drone-captured imagery has become a cornerstone of modern military operations,
+            offering unparalleled surveillance capabilities for strategic decision-making. Drones provide real-time,
+            high-resolution images that are essential for monitoring vast areas, identifying potential threats,
+            and enhancing situational awareness. In light of this, we have introduced a unique dataset aimed at
+            advancing the field of drone-based military target detection and tracking. This dataset is designed to
+            support the development of robust algorithms for surveillance and tracking of military targets,
+            ultimately contributing to the enhancement of defense and security operations.
           </p>
+
 
           {/* Banner Image */}
           <div className="flex justify-center mb-10">
@@ -162,7 +168,7 @@ const App = () => {
               className="w-full max-w-5xl rounded-lg shadow-lg"
             />
           </div>
-          <p className="text-center mb-2">Fig : Sample images from KIIT-MiTA Dataset</p>
+          <p className="text-center mb-2">Fig : Sample Drone-Captured Images from KIIT-MITA dataset.</p>
 
           {/* Data Collection */}
           <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
@@ -170,12 +176,7 @@ const App = () => {
             Data Collection
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-            To prepare the dataset, a total of <strong>1,700 images</strong> of military objects were
-            gathered from reputable sources and meticulously annotated for each object class.
-            Our data sources included open-source military datasets and publicly accessible images,
-            ensuring coverage of various environmental conditions.
-            The dataset represents diverse lighting conditions, backgrounds, angles, and weather scenarios,
-            enhancing diversity and robustness.
+          The KIIT-MITA dataset was created by capturing drone footage through authorized drone operations and sourcing publicly available videos from platforms like YouTube. Given the difficulty in accessing military drone images, frames were extracted from these videos to build a diverse dataset.
           </p>
 
           {/* Data Annotation */}
@@ -184,10 +185,7 @@ const App = () => {
             Data Annotation
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-            The images were manually annotated using <strong>CVAT</strong>, an open-source tool for YOLO bounding box annotation.
-            Each object was annotated with its class label and bounding box coordinates, normalized based on image dimensions.
-            This process resulted in over <strong>4,100 annotations</strong> to optimize model training and enhance performance accuracy.
-            This careful annotation ensures a robust detection model.
+          The images were manually annotated using CVAT, an open-source tool for bounding box annotation. Each object was labeled with its class and annotated with rectangular bounding box coordinates, which were normalized based on the image dimensions.
           </p>
         </div>
       </section>
@@ -206,7 +204,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">High-Resolution Drone Imagery</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Contains <strong>1,700 high-quality images</strong> captured from drones for military object detection.
+                The dataset includes 1,700 high-quality drone images, ideal for real-time military object detection and tracking operations.
                 </p>
               </div>
             </div>
@@ -237,7 +235,7 @@ const App = () => {
                         <li>Artillery</li>
                         <li>Missile</li>
                         <li>Radar</li>
-                        <li>M. Rocket Launcher</li>
+                        <li>Multiple Rocket Launcher</li>
                         <li>Soldier</li>
                         <li>Tank</li>
                         <li>Vehicle</li>
@@ -254,7 +252,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-purple-600">Detailed Annotations</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Over <strong>4,100 meticulous annotations</strong> created using CVAT for YOLO bounding boxes. Each object has normalized coordinates and class labels.
+                Over 4,100 meticulous annotations, exported in YOLO format with corresponding .txt files for coordinates, including normalized values and class labels.
                 </p>
               </div>
             </div>
@@ -265,7 +263,7 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-blue-600">Tailored for Real-Time Applications</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Specifically curated for training YOLO-based models and optimized for real-time detection in military scenarios.
+                Specifically curated for training object detection and tracking models, optimized for real-time applications in military scenarios within the domain of computer vision.
                 </p>
               </div>
             </div>
@@ -287,30 +285,22 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-orange-600">Split for Generalization</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Dataset is split into 3 sets to ensure model generalization and effective evaluation.
+                The dataset is divided into three sets to ensure model generalization and effective evaluation:
+
                 </p>
                 <li className="flex items-start space-x-4">
                   <FaAngleRight className="text-blue-600 mt-1" />
                   <span className="text-lg">
                     3 sets:
                     <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
-                      <li>training (80%)</li>
-                      <li>validation (10%)</li>
-                      <li>testing (10%)</li>
+                      <li>train: Contains 80% of the data, used for training the model.
+                      </li>
+                      <li>valid: Contains 10% of the data, used for model validation during training.
+                      </li>
+                      <li>test: Contains 10% of the data, used for final model   evaluation.</li>
                     </ul>
                   </span>
                 </li>
-              </div>
-            </div>
-
-            {/* Curated from Reputable Sources */}
-            <div className="flex items-start space-x-4">
-              <FaShieldAlt className="text-teal-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-teal-600">Curated from Reputable Sources</h3>
-                <p className="text-gray-700 leading-relaxed text-xl">
-                  Images sourced from open-source military datasets and publicly accessible images, ensuring authenticity and relevance.
-                </p>
               </div>
             </div>
           </div>
@@ -455,71 +445,80 @@ const App = () => {
       </section >
 
       {/* Contributors Section */}
-      <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
-        <div className="container mx-auto px-6 mt-16">
-          <h3 className="text-4xl font-extrabold text-blue-700 mb-12 text-center flex items-center justify-center">
-            <FaUsers className="mr-3 text-blue-500" />
-            Our Contributors
-          </h3>
+<section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
+  <div className="container mx-auto px-6 mt-16">
+    <h3 className="text-4xl font-extrabold text-blue-700 mb-12 text-center flex items-center justify-center">
+      <FaUsers className="mr-3 text-blue-500" />
+      Our Contributors
+    </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {/* Contributor Cards */}
-            {[
-              {
-                name: "Sudip Chakrabarty",
-                email: "sudipchakrabarty6@gmail.com",
-                img: sudip,
-                github: "https://github.com/Sudip-329",
-                linkedin: "https://www.linkedin.com/in/sudipchakrabarty329",
-              },
-              {
-                name: "Sourov Roy Shuvo",
-                email: "sourovroyshuvo777@gmail.com",
-                img: sourav1,
-                github: "https://github.com/SourovRS",
-                linkedin: "https://www.linkedin.com/in/sourov-roy-shuvo-292582255",
-              },
-              {
-                name: "Rajesh Chowdhury",
-                email: "rajesh99.bd@gmail.com",
-                img: rajesh,
-                github: "https://github.com/rajeshbd99",
-                linkedin: "https://www.linkedin.com/in/rajesh-chowdhury-361360224",
-              },
-              {
-                name: "Sorup Chakraborty",
-                email: "sorupchakraborty001@gmail.com",
-                img: sorup,
-                github: "https://github.com/sorupchakraborty",
-                linkedin: "https://www.linkedin.com/in/sorupchakraborty",
-              },
-            ].map((contributor, index) => (
-              <div
-                key={index}
-                className="relative bg-white shadow-xl rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300"
-              >
-                <img
-                  src={contributor.img}
-                  alt={contributor.name}
-                  className="w-28 h-28 rounded-full border-4 border-blue-400 mb-4 shadow-lg object-cover"
-                />
-                <h4 className="text-2xl font-bold text-gray-800">{contributor.name}</h4>
-                <a href={`mailto:${contributor.email}`} className="text-blue-500 hover:underline mt-2 text-sm flex items-center">
-                  <FaEnvelope className="mr-2" /> {contributor.email}
-                </a>
-                <div className="flex space-x-5 mt-4">
-                  <a href={contributor.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
-                    <FaGithub />
-                  </a>
-                  <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
-                    <FaLinkedin />
-                  </a>
-                </div>
-              </div>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      {/* Contributor Cards */}
+      {[
+        {
+          name: "Sudip Chakrabarty",
+          email: "sudipchakrabarty6@gmail.com",
+          img: sudip,
+          github: "https://github.com/Sudip-329",
+          linkedin: "https://www.linkedin.com/in/sudipchakrabarty329",
+        },
+        {
+          name: "Sourov Roy Shuvo",
+          email: "sourovroyshuvo777@gmail.com",
+          img: sourav1,
+          github: "https://github.com/SourovRS",
+          linkedin: "https://www.linkedin.com/in/sourov-roy-shuvo-292582255",
+        },
+        {
+          name: "Rajesh Chowdhury",
+          email: "rajesh99.bd@gmail.com",
+          img: rajesh,
+          github: "https://github.com/rajeshbd99",
+          linkedin: "https://www.linkedin.com/in/rajesh-chowdhury-361360224",
+        },
+        {
+          name: "Sorup Chakraborty",
+          email: "sorupchakraborty001@gmail.com",
+          img: sorup,
+          github: "https://github.com/sorupchakraborty",
+          linkedin: "https://www.linkedin.com/in/sorupchakraborty",
+        },
+      ].map((contributor, index) => (
+        <div
+          key={index}
+          className="relative bg-white shadow-xl rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300"
+        >
+          <img
+            src={contributor.img}
+            alt={contributor.name}
+            className="w-28 h-28 rounded-full border-4 border-blue-400 mb-4 shadow-lg object-cover"
+          />
+          <h4 className="text-2xl font-bold text-gray-800">{contributor.name}</h4>
+          
+          
+
+          <div className="flex space-x-5 mt-4">
+            {/* Email Icon - Clicking it will open Gmail */}
+          <button
+            onClick={() => window.location.href = `mailto:${contributor.email}`}
+            className="text-blue-500 hover:text-blue-700 text-2xl transition-transform transform hover:scale-110"
+            title="Send Email"
+          >
+            <FaEnvelope />
+          </button>
+            <a href={contributor.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
+              <FaGithub />
+            </a>
+            <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
+              <FaLinkedin />
+            </a>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Advisor Section */}
       <section id="advisor" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 mb-10">
@@ -557,10 +556,10 @@ const App = () => {
       < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-3" >
         <div className="container mx-auto text-center space-y-1">
           <div className="text-lg font-semibold">
-            <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
+            <p>&copy; 2024 Drone Defense Research. All rights reserved.</p>
           </div>
           <div className="text-sm">
-            <p>Innovating in defense technology through cutting-edge research.</p>
+            <p>Transforming Defense Capabilities with Cutting-Edge Research.</p>
           </div>
         </div>
       </footer >
