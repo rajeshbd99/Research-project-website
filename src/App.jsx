@@ -1,20 +1,21 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaGithub, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaUserTie, FaEnvelope, FaLinkedin, FaLink, FaGithub, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg';
 import { SiMega } from "react-icons/si";
 import { GiInspiration } from "react-icons/gi";
 import { DiGoogleDrive } from "react-icons/di";
 import img from './assets/Screenshot 2025-01-28 235024.png';
 import rajesh from './assets/rajesh.jpg';
-import sourov from './assets/sourav.jpg';
 import sudip from './assets/sudip.jpeg';
 import sorup from './assets/sorup.jpg';
-import pic from './assets/pic.jpg'
+import pic from './assets/pic.jpg';
+import sir from './assets/sir.jpg';
+import sourav1 from './assets/sourav1.jpg';
 
 const App = () => {
   return (
-    <div className="bg-gray-100 font-sans">
+    <div className="bg-gradient-to-r from-blue-50 to-blue-100 font-sans">
       {/* Navbar */}
       <nav className="text-white p-4 sticky top-0 z-50 shadow-lg rounded-b-xl bg-transparent backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
@@ -144,7 +145,6 @@ const App = () => {
         <div className="container mx-auto px-4 text-lg">
           {/* Heading */}
           <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mt-10">
-            <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
 
@@ -162,6 +162,7 @@ const App = () => {
               className="w-full max-w-5xl rounded-lg shadow-lg"
             />
           </div>
+          <p className="text-center mb-2">Fig : Sample images from KIIT-MiTA Dataset</p>
 
           {/* Data Collection */}
           <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
@@ -317,7 +318,7 @@ const App = () => {
       </section >
 
       {/* Dataset Links Section */}
-      < section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16" >
+      < section id="links" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16" >
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
             <FaLink className="mr-3 text-blue-500" />
@@ -404,7 +405,7 @@ const App = () => {
       </section >
 
       {/* Usage Policy Section */}
-      < section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16" >
+      < section id="usage" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16" >
         <div className="container mx-auto px-6">
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mt-10">
@@ -453,89 +454,113 @@ const App = () => {
         </div>
       </section >
 
-      {/* Contributors */}
-      <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
-        <div className="container mx-auto px-6">
-          <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
-            <FaUsers className="mr-3" />
-            Contributors
+      {/* Contributors Section */}
+      <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
+        <div className="container mx-auto px-6 mt-16">
+          <h3 className="text-4xl font-extrabold text-blue-700 mb-12 text-center flex items-center justify-center">
+            <FaUsers className="mr-3 text-blue-500" />
+            Our Contributors
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Contributor Card */}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Contributor Cards */}
             {[
               {
                 name: "Sudip Chakrabarty",
-                email: "21053329@kiit.ac.in",
+                email: "sudipchakrabarty6@gmail.com",
                 img: sudip,
+                github: "https://github.com/Sudip-329",
+                linkedin: "https://www.linkedin.com/in/sudipchakrabarty329",
               },
               {
                 name: "Sourov Roy Shuvo",
-                email: "21053456@kiit.ac.in",
-                img: sourov,
+                email: "sourovroyshuvo777@gmail.com",
+                img: sourav1,
+                github: "https://github.com/SourovRS",
+                linkedin: "https://www.linkedin.com/in/sourov-roy-shuvo-292582255",
               },
               {
                 name: "Rajesh Chowdhury",
-                email: "21053394@kiit.ac.in",
+                email: "rajesh99.bd@gmail.com",
                 img: rajesh,
+                github: "https://github.com/rajeshbd99",
+                linkedin: "https://www.linkedin.com/in/rajesh-chowdhury-361360224",
               },
               {
                 name: "Sorup Chakraborty",
-                email: "21053328@kiit.ac.in",
+                email: "sorupchakraborty001@gmail.com",
                 img: sorup,
+                github: "https://github.com/sorupchakraborty",
+                linkedin: "https://www.linkedin.com/in/sorupchakraborty",
               },
             ].map((contributor, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
+                className="relative bg-white shadow-xl rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300"
               >
                 <img
                   src={contributor.img}
                   alt={contributor.name}
-                  className="w-24 h-24 rounded-full mb-4 shadow-md"
+                  className="w-28 h-28 rounded-full border-4 border-blue-400 mb-4 shadow-lg object-cover"
                 />
-                <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
-                <a
-                  href={`mailto:${contributor.email}`}
-                  className="text-blue-500 hover:underline mt-2 text-sm"
-                >
-                  {contributor.email}
+                <h4 className="text-2xl font-bold text-gray-800">{contributor.name}</h4>
+                <a href={`mailto:${contributor.email}`} className="text-blue-500 hover:underline mt-2 text-sm flex items-center">
+                  <FaEnvelope className="mr-2" /> {contributor.email}
                 </a>
+                <div className="flex space-x-5 mt-4">
+                  <a href={contributor.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
+                    <FaGithub />
+                  </a>
+                  <a href={contributor.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
+                    <FaLinkedin />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Footer Information */}
-      <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
-        <h4 className="text-2xl font-semibold text-blue-600">Under the Guidance of:</h4>
-        <p className="text-gray-800">Dr. Rajdeep Chatterjee</p>
-        <p className="text-gray-800">School of Computer Engineering, KIIT</p>
-        <p className="text-gray-800">Bhubaneswar, Odisha - 751024</p>
-      </div>
+      {/* Advisor Section */}
+      <section id="advisor" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 mb-10">
+        <div className="container mx-auto px-6 flex flex-col items-center text-center">
+          <h3 className="text-4xl font-extrabold text-blue-700 mb-8 flex items-center">
+            <FaUserTie className="mr-3 text-blue-500" />
+            Our Advisor
+          </h3>
+          <div className="relative bg-white shadow-lg rounded-3xl p-10 flex flex-col items-center text-center w-full max-w-sm transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-300">
+            <img
+              src={sir}
+              alt="Dr. Rajdeep Chatterjee"
+              className="w-48 h-48 border-4 rounded-2xl border-gray-400 mb-4 shadow-lg object-fill"
+            />
+            <h4 className="text-2xl font-bold text-gray-800">Dr. Rajdeep Chatterjee</h4>
+            <p className="text-gray-600 text-lg">Associate Professor</p>
+            <p className="text-gray-600 text-lg">School of Computer Engineering, KIIT <br /> Bhubaneswar</p>
+            <div className="flex space-x-5 mt-4">
+              <a href="https://sites.google.com/kiit.ac.in/rajdeep/home" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
+                <FaGlobe />
+              </a>
+              <a href="https://github.com/cserajdeep" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black text-2xl transition-transform transform hover:scale-110">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/rajdeep-chatterjee-ph-d-60352325" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400 text-2xl transition-transform transform hover:scale-110">
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer */}
-      < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12" >
-        <div className="container mx-auto text-center space-y-6">
+      < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-3" >
+        <div className="container mx-auto text-center space-y-1">
           <div className="text-lg font-semibold">
             <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
           </div>
           <div className="text-sm">
             <p>Innovating in defense technology through cutting-edge research.</p>
-          </div>
-          {/* <div className="flex justify-center space-x-6">
-            <a href="https://twitter.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter text-2xl"></i>
-            </a>
-            <a href="https://linkedin.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin text-2xl"></i>
-            </a>
-            <a href="https://github.com" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github text-2xl"></i>
-            </a>
-          </div> */}
-          <div className="text-xs">
-            <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
           </div>
         </div>
       </footer >
