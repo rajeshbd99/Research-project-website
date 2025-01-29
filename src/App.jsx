@@ -290,13 +290,13 @@ const App = () => {
                 <li className="flex items-start space-x-4">
                   <FaAngleRight className="text-blue-600 mt-1" />
                   <span className="text-lg">
-                    3 sets:
+                    3 Sets:
                     <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
-                      <li>train: Contains 80% of the data, used for training the model.
+                      <li>Train: Contains 80% of the data, used for training the model.
                       </li>
-                      <li>valid: Contains 10% of the data, used for model validation during training.
+                      <li>Valid: Contains 10% of the data, used for model validation during training.
                       </li>
-                      <li>test: Contains 10% of the data, used for final model   evaluation.</li>
+                      <li>Test: Contains 10% of the data, used for final model evaluation.</li>
                     </ul>
                   </span>
                 </li>
