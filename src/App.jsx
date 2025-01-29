@@ -1,8 +1,9 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaDownload, FaLink, FaGithub, FaInfoCircle, FaCog, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaDownload, FaLink, FaGithub, FaCheckCircle, FaExclamationCircle, FaAngleRight, FaDatabase, FaMarker, FaUsers, FaChartPie, FaShieldAlt, FaTools, FaClock, FaPenFancy, FaListOl, FaGlobe, FaCameraRetro, FaStar } from "react-icons/fa";
 import img1 from './assets/img1.jpg';
 import { SiMega } from "react-icons/si";
+import { GiInspiration } from "react-icons/gi";
 import { DiGoogleDrive } from "react-icons/di";
 import img from './assets/Screenshot 2025-01-28 235024.png';
 import rajesh from './assets/rajesh.jpg';
@@ -55,7 +56,7 @@ const App = () => {
                 to="banner"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Home
               </Link>
@@ -63,7 +64,7 @@ const App = () => {
                 to="dataset"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Dataset
               </Link>
@@ -71,7 +72,7 @@ const App = () => {
                 to="features"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Features
               </Link>
@@ -79,7 +80,7 @@ const App = () => {
                 to="links"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Links
               </Link>
@@ -87,17 +88,9 @@ const App = () => {
                 to="usage"
                 smooth={true}
                 duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
               >
                 Usage Policy
-              </Link>
-              <Link
-                to="provenance"
-                smooth={true}
-                duration={500}
-                className="text-lg font-semibold text-black px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
-              >
-                Provenance
               </Link>
             </div>
           </div>
@@ -140,7 +133,7 @@ const App = () => {
       {/* Dataset Section */}
       <section id="dataset" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
         <div className="container mx-auto px-4 text-lg">
-          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mb-10 mt-10">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mt-10">
             <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
@@ -151,21 +144,6 @@ const App = () => {
           {/* Key Features */}
           <h3 className="text-2xl font-semibold text-blue-600 mb-4">Key Features:</h3>
           <ul className="space-y-4 text-gray-800 mb-8">
-            <li className="flex items-start space-x-4">
-              <FaAngleRight className="text-blue-600 mt-1" />
-              <span className="text-lg">
-                7 distinct classes:
-                <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
-                  <li>Artillery</li>
-                  <li>Missile</li>
-                  <li>Radar</li>
-                  <li>M. Rocket Launcher</li>
-                  <li>Soldier</li>
-                  <li>Tank</li>
-                  <li>Vehicle</li>
-                </ul>
-              </span>
-            </li>
             <li className="flex items-start space-x-4">
               <FaAngleRight className="text-blue-600 mt-1" />
               <span className="text-lg">
@@ -356,7 +334,7 @@ const App = () => {
       {/* Other Sections */}
       <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mb-16 mt-10">
+          <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mt-10">
             <FaStar className="text-blue-500 mr-3" />
             Key Features of the Dataset
           </h2>
@@ -389,7 +367,22 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-red-600">Seven Distinct Classes</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Military objects are classified into seven categories: <strong>Artillery</strong>, <strong>Missile</strong>, <strong>Radar</strong>, <strong>M. Rocket Launcher</strong>, <strong>Soldier</strong>, <strong>Tank</strong>, and <strong>Vehicle</strong>.
+                  Military objects are classified into seven categories:
+                  <li className="flex items-start space-x-4">
+                    <FaAngleRight className="text-blue-600 mt-1" />
+                    <span className="text-lg">
+                      7 distinct classes:
+                      <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
+                        <li>Artillery</li>
+                        <li>Missile</li>
+                        <li>Radar</li>
+                        <li>M. Rocket Launcher</li>
+                        <li>Soldier</li>
+                        <li>Tank</li>
+                        <li>Vehicle</li>
+                      </ul>
+                    </span>
+                  </li>
                 </p>
               </div>
             </div>
@@ -433,8 +426,19 @@ const App = () => {
               <div>
                 <h3 className="text-2xl font-semibold text-orange-600">Split for Generalization</h3>
                 <p className="text-gray-700 leading-relaxed text-xl">
-                  Dataset is split into <strong>training (80%)</strong>, <strong>validation (10%)</strong>, and <strong>testing (10%)</strong> sets to ensure model generalization and effective evaluation.
+                  Dataset is split into 3 sets to ensure model generalization and effective evaluation.
                 </p>
+                <li className="flex items-start space-x-4">
+              <FaAngleRight className="text-blue-600 mt-1" />
+              <span className="text-lg">
+                3 sets:
+                <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
+                  <li>training (80%)</li>
+                  <li>validation (10%)</li>
+                  <li>testing (10%)</li>
+                </ul>
+              </span>
+            </li>
               </div>
             </div>
 
@@ -456,7 +460,7 @@ const App = () => {
       <section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
         <div className="container mx-auto px-6">
           <div className="bg-white shadow-lg rounded-lg p-8">
-            <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
+            <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mt-10">
               <FaExclamationCircle className="text-blue-500 mr-3" />
               Usage Policy
             </h2>
@@ -465,7 +469,7 @@ const App = () => {
               Commercial use is strictly prohibited. Users are required to provide proper attribution to the creators if this dataset is utilized in any project or publication.
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-2">Inspiration</h3>
+              <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center"><GiInspiration className="mr-2 text-gray-500" />Inspiration</h3>
               <p className="text-gray-700 text-xl">
                 This dataset was created to facilitate research in defense and security applications, particularly for identifying and tracking military objects in drone-captured imagery.
                 It serves as a valuable resource for exploring advancements in computer vision and autonomous surveillance systems.
@@ -490,60 +494,13 @@ const App = () => {
                   If used in a publication or project, proper credit must be given to the creators.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Provenance Section */}
-      <section id="provenance" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
-        <div className="container mx-auto px-6">
-          <div className="bg-white shadow-lg rounded-lg p-8">
-            <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mb-16 mt-10">
-              <FaInfoCircle className="mr-3 text-blue-500" />
-              Provenance
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
-              The dataset combines <strong>drone-captured images</strong>, public sources, and frames extracted from high-resolution YouTube videos depicting military scenarios.
-              Images were carefully preprocessed to ensure diversity and robustness.
-            </p>
-
-            {/* Provenance Updates */}
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 text-xl">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-2">Provenance Updates</h3>
-              <p className="text-gray-700">
-                <strong>Auto Syncing: Off</strong><br />
-                Data will not continually sync with new notebook versions.
-              </p>
-            </div>
-
-            {/* Sources */}
-            <h3 className="text-2xl font-semibold text-green-600 mb-4 flex items-center">
-              <FaDatabase className="mr-2 text-green-500" />
-              Sources
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
-              This dataset combines drone-captured images collected by us, publicly available images from online sources, and frames extracted from high-resolution YouTube videos depicting military scenarios.
-            </p>
-
-            {/* Collection Methodology */}
-            <h3 className="text-2xl font-semibold text-purple-600 mb-4 flex items-center">
-              <FaCog className="mr-2 text-purple-500" />
-              Collection Methodology
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6 text-xl">
-              Images were preprocessed through resizing, cropping, and augmentations like <strong>rotation</strong>, <strong>scaling</strong>, and <strong>brightness adjustments</strong> to enhance diversity.
-            </p>
-
-            {/* License */}
-            <div className="bg-gray-50 border-l-4 border-gray-400 p-4">
-              <h3 className="text-2xl font-semibold text-gray-600 mb-2 flex items-center">
-                <FaShieldAlt className="mr-2 text-gray-500" />
-                License
-              </h3>
-              <p className="text-gray-700 text-xl">
-                Attribution-NonCommercial 4.0 International (<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CC BY-NC 4.0</a>)
-              </p>
+              {/* License */}
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center"><FaShieldAlt className="mr-2 text-gray-500" />License</h3>
+                <p className="text-gray-700 text-xl">
+                  Attribution-NonCommercial 4.0 International (<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CC BY-NC 4.0</a>)
+                </p>
+              </div>
             </div>
           </div>
         </div>
