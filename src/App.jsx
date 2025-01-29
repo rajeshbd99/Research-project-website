@@ -10,6 +10,7 @@ import rajesh from './assets/rajesh.jpg';
 import sourov from './assets/sourav.jpg';
 import sudip from './assets/sudip.jpeg';
 import sorup from './assets/sorup.jpg';
+import pic from './assets/pic.jpg'
 
 const App = () => {
   return (
@@ -92,6 +93,14 @@ const App = () => {
               >
                 Usage Policy
               </Link>
+              <Link
+                to="contributors"
+                smooth={true}
+                duration={500}
+                className="text-lg font-semibold px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer shadow-lg transition-all"
+              >
+                Contributors
+              </Link>
             </div>
           </div>
         </div>
@@ -133,30 +142,26 @@ const App = () => {
       {/* Dataset Section */}
       <section id="dataset" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
         <div className="container mx-auto px-4 text-lg">
+          {/* Heading */}
           <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center justify-center mt-10">
             <FaDownload className="mr-2" />
             Dataset Overview
           </h2>
+
+          {/* Description */}
           <p className="text-gray-700 leading-relaxed mb-6 flex flex-col md:flex-row items-center justify-center text-lg md:text-lg lg:text-xl text-center md:text-left">
-            The dataset contains <strong className="text-black ml-1">1,700 high-resolution images</strong> captured by drones, annotated in the YOLO format for object detection tasks.
+            The dataset contains <strong className="text-black ml-1">1,700 high-resolution images</strong>
+            captured by drones, annotated in the YOLO format for object detection tasks.
           </p>
 
-          {/* Key Features */}
-          <h3 className="text-2xl font-semibold text-blue-600 mb-4">Key Features:</h3>
-          <ul className="space-y-4 text-gray-800 mb-8">
-            <li className="flex items-start space-x-4">
-              <FaAngleRight className="text-blue-600 mt-1" />
-              <span className="text-lg">
-                Detailed bounding box annotations for each object class
-              </span>
-            </li>
-            <li className="flex items-start space-x-4">
-              <FaAngleRight className="text-blue-600 mt-1" />
-              <span className="text-lg">
-                Ideal for training YOLO-based models or other object detection architectures
-              </span>
-            </li>
-          </ul>
+          {/* Banner Image */}
+          <div className="flex justify-center mb-10">
+            <img
+              src={pic}
+              alt="Dataset Banner"
+              className="w-full max-w-5xl rounded-lg shadow-lg"
+            />
+          </div>
 
           {/* Data Collection */}
           <h3 className="text-2xl font-semibold text-blue-600 mb-4 flex items-center">
@@ -164,9 +169,12 @@ const App = () => {
             Data Collection
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-            To prepare the dataset, a total of <strong>1,700 images</strong> of military objects were gathered from reputable sources and meticulously annotated for each object class.
-            Our data sources included open-source military datasets and publicly accessible images, ensuring coverage of various environmental conditions.
-            The dataset represents diverse lighting conditions, backgrounds, angles, and weather scenarios, enhancing diversity and robustness.
+            To prepare the dataset, a total of <strong>1,700 images</strong> of military objects were
+            gathered from reputable sources and meticulously annotated for each object class.
+            Our data sources included open-source military datasets and publicly accessible images,
+            ensuring coverage of various environmental conditions.
+            The dataset represents diverse lighting conditions, backgrounds, angles, and weather scenarios,
+            enhancing diversity and robustness.
           </p>
 
           {/* Data Annotation */}
@@ -180,159 +188,11 @@ const App = () => {
             This process resulted in over <strong>4,100 annotations</strong> to optimize model training and enhance performance accuracy.
             This careful annotation ensures a robust detection model.
           </p>
-
-          {/* Contributors */}
-          <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
-            <div className="container mx-auto px-6">
-              <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
-                <FaUsers className="mr-3" />
-                Contributors
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* Contributor Card */}
-                {[
-                  {
-                    name: "Sudip Chakrabarty",
-                    email: "21053329@kiit.ac.in",
-                    img: sudip,
-                  },
-                  {
-                    name: "Sourov Roy Shuvo",
-                    email: "21053456@kiit.ac.in",
-                    img: sourov,
-                  },
-                  {
-                    name: "Rajesh Chowdhury",
-                    email: "21053394@kiit.ac.in",
-                    img: rajesh,
-                  },
-                  {
-                    name: "Sorup Chakraborty",
-                    email: "21053328@kiit.ac.in",
-                    img: sorup,
-                  },
-                ].map((contributor, index) => (
-                  <div
-                    key={index}
-                    className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
-                  >
-                    <img
-                      src={contributor.img}
-                      alt={contributor.name}
-                      className="w-24 h-24 rounded-full mb-4 shadow-md"
-                    />
-                    <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
-                    <a
-                      href={`mailto:${contributor.email}`}
-                      className="text-blue-500 hover:underline mt-2 text-sm"
-                    >
-                      {contributor.email}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Footer Information */}
-          <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
-            <h4 className="text-2xl font-semibold text-blue-600">Under the Guidance of:</h4>
-            <p className="text-gray-800">Dr. Rajdeep Chatterjee</p>
-            <p className="text-gray-800">School of Computer Engineering, KIIT</p>
-            <p className="text-gray-800">Bhubaneswar, Odisha - 751024</p>
-          </div>
         </div>
       </section>
 
-      {/* Dataset Links Section */}
-      <section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
-            <FaLink className="mr-3 text-blue-500" />
-            Dataset Links
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {/* Kaggle Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <FaExternalLinkAlt className="text-blue-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Explore the dataset on Kaggle for detailed insights and examples.
-                </p>
-                <a
-                  href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 mt-4 inline-block hover:underline text-lg"
-                >
-                  Visit Kaggle <FaExternalLinkAlt className="inline" />
-                </a>
-              </div>
-            </div>
-
-            {/* Google Drive Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <DiGoogleDrive className="text-green-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-green-600">Google Drive</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Get a local copy of the dataset for your research and analysis.
-                </p>
-                <a
-                  href="https://drive.google.com/drive/folders/1fZ_B0lIpVgThWAEi3BPSNnUPr1j3eCiN?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 mt-4 inline-block hover:underline text-lg"
-                >
-                  Download Now <FaDownload className="inline" />
-                </a>
-              </div>
-            </div>
-
-            {/* Mega Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <SiMega className="text-red-600 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-red-600">Mega Dataset</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Access the complete dataset directly from Mega for detailed analysis and research applications.
-                </p>
-                <a
-                  href="https://mega.nz/folder/hesAGKZT#PGPJeQjWy3oQL9nyhBqt5g"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-red-600 mt-4 inline-block hover:underline text-lg"
-                >
-                  Access Mega <FaExternalLinkAlt className="inline" />
-                </a>
-              </div>
-            </div>
-
-            {/* GitHub Link */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
-              <FaGithub className="text-gray-800 text-3xl" />
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-800">GitHub Repository</h3>
-                <p className="text-gray-700 mt-2 text-xl">
-                  Explore the codebase and implementation details on our GitHub repository.
-                </p>
-                <a
-                  href="https://github.com/Sudip-329/KIIT-MiTA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-800 mt-4 inline-block hover:underline text-lg"
-                >
-                  Visit GitHub <FaGithub className="inline" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Other Sections */}
-      <section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
+      {/* Features Section */}
+      < section id="features" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16" >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-blue-700 mb-8 flex items-center justify-center mt-10">
             <FaStar className="text-blue-500 mr-3" />
@@ -429,16 +289,16 @@ const App = () => {
                   Dataset is split into 3 sets to ensure model generalization and effective evaluation.
                 </p>
                 <li className="flex items-start space-x-4">
-              <FaAngleRight className="text-blue-600 mt-1" />
-              <span className="text-lg">
-                3 sets:
-                <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
-                  <li>training (80%)</li>
-                  <li>validation (10%)</li>
-                  <li>testing (10%)</li>
-                </ul>
-              </span>
-            </li>
+                  <FaAngleRight className="text-blue-600 mt-1" />
+                  <span className="text-lg">
+                    3 sets:
+                    <ul className="mt-2 ml-6 list-disc list-inside text-xl font-bold">
+                      <li>training (80%)</li>
+                      <li>validation (10%)</li>
+                      <li>testing (10%)</li>
+                    </ul>
+                  </span>
+                </li>
               </div>
             </div>
 
@@ -454,10 +314,97 @@ const App = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
+
+      {/* Dataset Links Section */}
+      < section id="links" className="bg-gradient-to-r from-blue-50 to-gray-100 py-16" >
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-blue-700 mb-16 flex items-center justify-center mt-10">
+            <FaLink className="mr-3 text-blue-500" />
+            Dataset Links
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* Kaggle Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaExternalLinkAlt className="text-blue-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-blue-600">Kaggle Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Explore the dataset on Kaggle for detailed insights and examples.
+                </p>
+                <a
+                  href="https://www.kaggle.com/datasets/sudipchakrabarty/kiit-mita/data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Visit Kaggle <FaExternalLinkAlt className="inline" />
+                </a>
+              </div>
+            </div>
+
+            {/* Google Drive Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <DiGoogleDrive className="text-green-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-green-600">Google Drive</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Get a local copy of the dataset for your research and analysis.
+                </p>
+                <a
+                  href="https://drive.google.com/drive/folders/1fZ_B0lIpVgThWAEi3BPSNnUPr1j3eCiN?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Download Now <FaDownload className="inline" />
+                </a>
+              </div>
+            </div>
+
+            {/* Mega Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <SiMega className="text-red-600 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-red-600">Mega Dataset</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Access the complete dataset directly from Mega for detailed analysis and research applications.
+                </p>
+                <a
+                  href="https://mega.nz/folder/hesAGKZT#PGPJeQjWy3oQL9nyhBqt5g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 mt-4 inline-block hover:underline text-lg"
+                >
+                  Access Mega <FaExternalLinkAlt className="inline" />
+                </a>
+              </div>
+            </div>
+
+            {/* GitHub Link */}
+            <div className="bg-white shadow-md rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow duration-300">
+              <FaGithub className="text-gray-800 text-3xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800">GitHub Repository</h3>
+                <p className="text-gray-700 mt-2 text-xl">
+                  Explore the codebase and implementation details on our GitHub repository.
+                </p>
+                <a
+                  href="https://github.com/Sudip-329/KIIT-MiTA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 mt-4 inline-block hover:underline text-lg"
+                >
+                  Visit GitHub <FaGithub className="inline" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section >
 
       {/* Usage Policy Section */}
-      <section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16">
+      < section id="usage" className="bg-gradient-to-r from-gray-100 to-gray-300 py-16" >
         <div className="container mx-auto px-6">
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mt-10">
@@ -504,10 +451,71 @@ const App = () => {
             </div>
           </div>
         </div>
+      </section >
+
+      {/* Contributors */}
+      <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
+        <div className="container mx-auto px-6">
+          <h3 className="text-4xl font-bold text-blue-600 mb-12 text-center flex items-center justify-center">
+            <FaUsers className="mr-3" />
+            Contributors
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Contributor Card */}
+            {[
+              {
+                name: "Sudip Chakrabarty",
+                email: "21053329@kiit.ac.in",
+                img: sudip,
+              },
+              {
+                name: "Sourov Roy Shuvo",
+                email: "21053456@kiit.ac.in",
+                img: sourov,
+              },
+              {
+                name: "Rajesh Chowdhury",
+                email: "21053394@kiit.ac.in",
+                img: rajesh,
+              },
+              {
+                name: "Sorup Chakraborty",
+                email: "21053328@kiit.ac.in",
+                img: sorup,
+              },
+            ].map((contributor, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src={contributor.img}
+                  alt={contributor.name}
+                  className="w-24 h-24 rounded-full mb-4 shadow-md"
+                />
+                <h4 className="text-xl font-semibold text-gray-800">{contributor.name}</h4>
+                <a
+                  href={`mailto:${contributor.email}`}
+                  className="text-blue-500 hover:underline mt-2 text-sm"
+                >
+                  {contributor.email}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
+      {/* Footer Information */}
+      <div className="mt-8 bg-blue-100 p-6 rounded-md shadow-md flex flex-col items-center text-xl">
+        <h4 className="text-2xl font-semibold text-blue-600">Under the Guidance of:</h4>
+        <p className="text-gray-800">Dr. Rajdeep Chatterjee</p>
+        <p className="text-gray-800">School of Computer Engineering, KIIT</p>
+        <p className="text-gray-800">Bhubaneswar, Odisha - 751024</p>
+      </div>
+
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12">
+      < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-12" >
         <div className="container mx-auto text-center space-y-6">
           <div className="text-lg font-semibold">
             <p>&copy; 2025 Drone Defense Research. All rights reserved by all contributors.</p>
@@ -530,8 +538,8 @@ const App = () => {
             <p>Powered by innovation. All designs and research are protected by copyright laws.</p>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 };
 
