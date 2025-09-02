@@ -30,8 +30,6 @@ export default function Footer() {
         </div>
         <div className="text-sm">
           <p>Transforming Defense Capabilities with Cutting-Edge Research.</p>
-           <a href='http://www.freevisitorcounters.com'>Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=9cf034db2bfaa3430d30b3137f92efbc9fd844cd'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1384370/t/5"></script>
         </div>
 
         {/* Free Visitor Counter */}
