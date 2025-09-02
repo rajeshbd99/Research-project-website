@@ -12,6 +12,7 @@ import sorup from './assets/sorup.jpg';
 import pic from './assets/pic.jpg';
 import sir from './assets/sir.jpg';
 import sourav1 from './assets/sourav1.jpg';
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -629,16 +630,9 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      < footer className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-3" >
-        <div className="container mx-auto text-center space-y-1">
-          <div className="text-lg font-semibold">
-            <p>&copy; 2024 Drone Defense Research. All rights reserved.</p>
-          </div>
-          <div className="text-sm">
-            <p>Transforming Defense Capabilities with Cutting-Edge Research.</p>
-          </div>
-        </div>
-      </footer >
+
+      <Footer />
+      
     </div >
   );
 };
