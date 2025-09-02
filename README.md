@@ -80,6 +80,19 @@ This dataset is available under the **Attribution-NonCommercial 4.0 Internationa
 
 ## ⭐ Citation
 If you use this dataset, please cite our research paper:
+### BibTeX
+
+```bibtex
+@INPROCEEDINGS{10969335,
+  author={Chakrabarty, Sudip and Chatterjee, Rajdeep and Chakraborty, Sorup and Roy Shuvo, Sourov and Chowdhury, Rajesh},
+  booktitle={2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC)}, 
+  title={Drones in Defense: Real-Time Vision-Based Military Target Surveillance and Tracking}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={508-513},
+  keywords={Training;Target tracking;Accuracy;Military computing;Surveillance;Computational modeling;Radar tracking;Real-time systems;Drones;Videos;Drone;KIIT-MiTA;Military;Object Detection;YOLOv11;Tracking},
+  doi={10.1109/ISACC65211.2025.10969335}}
 
 
 ---
