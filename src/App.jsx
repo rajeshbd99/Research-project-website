@@ -394,7 +394,7 @@ const App = () => {
       </section >
 
       {/* Usage Policy Section */}
-      < section id="usage" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16" >
+      <section id="usage" className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
         <div className="container mx-auto px-6">
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-4xl font-bold text-blue-700 mb-6 flex items-center justify-center mt-10">
@@ -405,13 +405,19 @@ const App = () => {
               This dataset is intended for <strong>educational</strong> and <strong>research purposes only</strong>.
               Commercial use is strictly prohibited. Users are required to provide proper attribution to the creators if this dataset is utilized in any project or publication.
             </p>
+
+            {/* Inspiration */}
             <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center"><GiInspiration className="mr-2 text-gray-500" />Inspiration</h3>
+              <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center">
+                <GiInspiration className="mr-2 text-gray-500" />Inspiration
+              </h3>
               <p className="text-gray-700 text-xl">
                 This dataset was created to facilitate research in defense and security applications, particularly for identifying and tracking military objects in drone-captured imagery.
                 It serves as a valuable resource for exploring advancements in computer vision and autonomous surveillance systems.
               </p>
             </div>
+
+            {/* Usage Rules */}
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <FaCheckCircle className="text-green-600 text-2xl" />
@@ -431,17 +437,92 @@ const App = () => {
                   If used in a publication or project, proper credit must be given to the creators.
                 </p>
               </div>
+
               {/* License */}
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-                <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center"><FaShieldAlt className="mr-2 text-gray-500" />License</h3>
+                <h3 className="text-2xl font-semibold text-blue-600 mb-2 flex items-center">
+                  <FaShieldAlt className="mr-2 text-gray-500" />License
+                </h3>
                 <p className="text-gray-700 text-xl">
                   Attribution-NonCommercial 4.0 International (<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CC BY-NC 4.0</a>)
                 </p>
               </div>
+
+              {/* Citation */}
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                <h3 className="text-2xl font-semibold text-yellow-700 mb-2 flex items-center">
+                  ⭐ Citation
+                </h3>
+                <p className="text-gray-700 text-xl mb-3">
+                  If you use this dataset, please cite our research paper:
+                </p>
+
+                {/* BibTeX with Copy Button */}
+                <div className="relative">
+                  <pre id="bibtex-text" className="bg-gray-100 text-sm text-gray-800 p-4 rounded-lg overflow-x-auto">
+                    {`@INPROCEEDINGS{10969335,
+  author={Chakrabarty, Sudip and Chatterjee, Rajdeep and Chakraborty, Sorup and Roy Shuvo, Sourov and Chowdhury, Rajesh},
+  booktitle={2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC)}, 
+  title={Drones in Defense: Real-Time Vision-Based Military Target Surveillance and Tracking}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={508-513},
+  keywords={Training;Target tracking;Accuracy;Military computing;Surveillance;Computational modeling;Radar tracking;Real-time systems;Drones;Videos;Drone;KIIT-MiTA;Military;Object Detection;YOLOv11;Tracking},
+  doi={10.1109/ISACC65211.2025.10969335}}`}
+                  </pre>
+                  <button
+                    onClick={() => {
+                      const text = document.getElementById("bibtex-text")?.innerText;
+                      navigator.clipboard.writeText(text || "");
+
+                      // Show custom toast
+                      const toast = document.createElement("div");
+                      toast.innerText = "✅ BibTeX copied to clipboard!";
+                      toast.className =
+                        "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg animate-fade-in-out z-50";
+                      document.body.appendChild(toast);
+
+                      setTimeout(() => {
+                        toast.remove();
+                      }, 2500);
+                    }}
+                    className="absolute top-2 right-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1 rounded-lg shadow-md transition"
+                  >
+                    Copy
+                  </button>
+                </div>
+
+                {/* Paper Link as Button */}
+                <div className="mt-5 flex justify-center">
+                  <a
+                    href="https://ieeexplore.ieee.org/abstract/document/10969335/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition"
+                  >
+                    📄 View Paper on IEEE Xplore
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section >
+
+        {/* Toast animation style */}
+        <style>{`
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translate(-50%, 20px); }
+      10% { opacity: 1; transform: translate(-50%, 0); }
+      90% { opacity: 1; transform: translate(-50%, 0); }
+      100% { opacity: 0; transform: translate(-50%, 20px); }
+    }
+    .animate-fade-in-out {
+      animation: fadeInOut 3.0s ease-in-out forwards;
+    }
+  `}</style>
+      </section>
+
 
       {/* Contributors Section */}
       <section id="contributors" className="bg-gradient-to-r from-blue-100 to-blue-50 py-16 ">
